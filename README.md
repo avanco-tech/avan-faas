@@ -1,2 +1,3 @@
 # avan-faas
-avan fpga as a service repository
+Avanco fpga as a service repository
+
