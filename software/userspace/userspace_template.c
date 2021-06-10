@@ -54,6 +54,16 @@
 #include <sys/mman.h>
 #include <pthread.h>
 
+#define TRANSFER_SIZE 						20
+#define MM2S_BUFFER_ADDR_INT  (0x79C00000)
+#define S2MM_BUFFER_ADDR_INT (MM2S_BUFFER_ADDR_INT + (TRANSFER_SIZE*sizeof(unsigned int)))
+#define XPAR_M_AXI_LITE_CTRL_BASEADDR (0x00A0000000)
+
+// ///////////////////////////////////////////////////////////////
+// //
+// // AXI Interrupt controller MACROs
+// //
+// ///////////////////////////////////////////////////////////////
 #define XINTC_BASEADDR (0x00A0010000)
 #define XIN_ISR_OFFSET      (0 >> 2)	
 #define XIN_IPR_OFFSET      (4 >> 2)	
@@ -70,17 +80,6 @@
 #define XIN_INT_MASTER_ENABLE_MASK      (0x1UL)
 #define XIN_INT_HARDWARE_ENABLE_MASK    (0x2UL)	
 
-
-#define MM2S_BUFFER_SIZE					20
-#define S2MM_BUFFER_SIZE 					20
-#define TRANSFER_SIZE 						20
-#define PRINT_DMA_ISR_printf 				1
-#define NUMBER_PRINT_COUNTER				10
-#define DELAY_PRINT_COUNTER					40000
-#define MM2S_BUFFER_ADDR_INT  (0x79C00000)
-#define S2MM_BUFFER_ADDR_INT (MM2S_BUFFER_ADDR_INT + (TRANSFER_SIZE*sizeof(unsigned int)))
-#define XPAR_M_AXI_LITE_CTRL_BASEADDR (0x00A0000000)
-
 typedef enum { false, true } bool;
 
 volatile unsigned int * dma_mm2s_buffer_int;
@@ -90,6 +89,12 @@ volatile unsigned int* xintc_virtaddr;
 char input_file[40]  = "inputs.bin";
 char output_file[40] = "output.bin";
 long in_filelen;
+
+// ///////////////////////////////////////////////////////////////
+// //
+// // AXI Interrupt controller initialize
+// //
+// ///////////////////////////////////////////////////////////////
 
 void init_interrupt_controller(){
 	unsigned int MasterEnable = XIN_INT_MASTER_ENABLE_MASK ;
@@ -101,6 +106,12 @@ void init_interrupt_controller(){
 	xintc_virtaddr[XIN_ISR_OFFSET] = 0xFFFFFFFF;
 	xintc_virtaddr[XIN_MER_OFFSET] = MasterEnable;
 }
+
+// ///////////////////////////////////////////////////////////////
+// //
+// // FILE I/O Routines
+// //
+// ///////////////////////////////////////////////////////////////
 
 void read_file(){
 	unsigned int *temp_ptr;
@@ -199,9 +210,13 @@ void DMA_S2MM_Start_Transfer ( void )  {
 
 }
 
+// ///////////////////////////////////////////////////////////////
+// //
+// // mapping memory for PL Devices and DDR RAM buffers
+// //
+// ///////////////////////////////////////////////////////////////
+
 int device_init(){
-
-
 	int fd;
 	if((fd = open("/dev/mem", O_RDWR | O_SYNC)) != -1)
 	{
@@ -228,7 +243,28 @@ int device_init(){
 	}
 	close(fd);
 	return 0;
+}
 
+// ///////////////////////////////////////////////////////////////
+// //
+// // PL-PS Interrupts handling
+// //
+// ///////////////////////////////////////////////////////////////
+
+void interrupt_ack (){
+	unsigned int tmpVar;
+	// interrupt controller ack
+	xintc_virtaddr[XIN_CIE_OFFSET] = 0x3;
+	xintc_virtaddr[XIN_IAR_OFFSET] = 0x3;
+	// dma ack
+	tmpVar = dma0_virtaddr[0x4 >> 2];
+	tmpVar = tmpVar | 0x1000;
+	dma0_virtaddr [0x4 >> 2] = tmpVar;
+	tmpVar = dma0_virtaddr[0x34 >> 2];
+	tmpVar = tmpVar | 0x1000;
+	dma0_virtaddr [0x34 >> 2] = tmpVar;
+	// enable interrupt
+	xintc_virtaddr[XIN_SIE_OFFSET] = 0x3;
 }
 
 void *interrupt_handler(void *vargp)
@@ -238,7 +274,6 @@ void *interrupt_handler(void *vargp)
 	int irq_off = 0;
 	unsigned irq_count;
 	int err;
-	unsigned int tmpVar;
 	device_init();
 	
 	if((fd = open("/dev/uio0", O_RDWR )) != -1)
@@ -249,27 +284,17 @@ void *interrupt_handler(void *vargp)
 	{
 		printf("failed to open irq dev\n");
 	}
-	init_interrupt_controller(1);
+	init_interrupt_controller();
 	while(1)
 	{
 		// enable interrupt
 		write(fd, &irq_on, sizeof(irq_on));
-		printf("enabled irq\n"); 
+		printf("enabled irq\n");
 		// poll interrupt
 		err = read(fd, &irq_count, 4);
 		write(fd, &irq_off, sizeof(irq_off));
-		// interrupt controller ack
-		xintc_virtaddr[XIN_CIE_OFFSET] = 0x3;
-		xintc_virtaddr[XIN_IAR_OFFSET] = 0x3;
-		// dma ack
-		tmpVar = dma0_virtaddr[0x4 >> 2];
-		tmpVar = tmpVar | 0x1000;
-		dma0_virtaddr [0x4 >> 2] = tmpVar;
-		tmpVar = dma0_virtaddr[0x34 >> 2];
-		tmpVar = tmpVar | 0x1000;
-		dma0_virtaddr [0x34 >> 2] = tmpVar;
-		// enable interrupt
-		xintc_virtaddr[XIN_SIE_OFFSET] = 0x3;
+		// acknowledge interrupt and enable interrupts again 
+		interrupt_ack();
 		printf("irq_count %d\n",irq_count);
 	}
 }
@@ -281,12 +306,26 @@ void *interrupt_handler(void *vargp)
 
 int main()
 {
-	pthread_t thread_id;
-	pthread_create(&thread_id, NULL, interrupt_handler, NULL);
 	unsigned int i;
 	int xStatus;
 	char c;
 	printf("app start...\n\r");
+
+	///////////////////////////////////////////////////////////////
+    //
+    // create a thread for interrupt handler
+    //
+    ///////////////////////////////////////////////////////////////
+
+	pthread_t thread_id;
+	pthread_create(&thread_id, NULL, interrupt_handler, NULL);
+
+	///////////////////////////////////////////////////////////////
+    //
+    // map memory for PL Device registers and DDR Buffers
+    //
+    ///////////////////////////////////////////////////////////////
+
 	xStatus = device_init();
 	if(xStatus == 0){
 		printf("device mmap successfull\n");
@@ -294,6 +333,13 @@ int main()
 	else{
 		return -1;
 	}
+
+	///////////////////////////////////////////////////////////////
+    //
+    // read input data from binary file
+    //
+    ///////////////////////////////////////////////////////////////
+
 	read_file();
 
     ///////////////////////////////////////////////////////////////
@@ -309,7 +355,7 @@ int main()
 
     ///////////////////////////////////////////////////////////////
     //
-    // main loop
+    // Run DMAs
     //
     ///////////////////////////////////////////////////////////////
 
@@ -317,10 +363,24 @@ int main()
 	DMA_S2MM_Start_Transfer();
 	DMA_MM2S_Start_Transfer();
 
+    ///////////////////////////////////////////////////////////////
+    //
+    // print dma outputs
+    //
+    ///////////////////////////////////////////////////////////////
+
 	printf("DMA S2MM Buffer:\n\r");
 	printf("index:\t\tsource\t\tresult\n\r");
 	for (i = 0; i < TRANSFER_SIZE; i++)
 		printf("%d:\t\t%d\t\t%d\n\r", i, dma_mm2s_buffer_int[i], dma_mm2s_buffer_int[i+TRANSFER_SIZE] );
+
+    ///////////////////////////////////////////////////////////////
+    //
+    // write outputs to binary file
+    //
+    ///////////////////////////////////////////////////////////////
+
 	write_file();
+
 	return 0;
 }
