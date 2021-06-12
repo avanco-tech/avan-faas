@@ -65,25 +65,7 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
--endlib
--makelib ies_lib/axi_protocol_converter_v2_1_22 \
-  "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
--endlib
--makelib ies_lib/axi_clock_converter_v2_1_21 \
-  "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/1304/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
--endlib
--makelib ies_lib/blk_mem_gen_v8_4_4 \
-  "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
--endlib
--makelib ies_lib/axi_dwidth_converter_v2_1_22 \
-  "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/2394/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
-  "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
   "../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
-  "../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
-  "../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
 -endlib
 -makelib ies_lib/xbip_utils_v3_0_10 \
   "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/d117/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -135,9 +117,26 @@
   "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
   "../../../bd/design_1/ip/design_1_xlconstant_1_0/sim/design_1_xlconstant_1_0.v" \
   "../../../bd/design_1/sim/design_1.v" \
+-endlib
+-makelib ies_lib/axi_protocol_converter_v2_1_22 \
+  "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/axi_clock_converter_v2_1_21 \
+  "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/1304/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/blk_mem_gen_v8_4_4 \
+  "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib ies_lib/axi_dwidth_converter_v2_1_22 \
+  "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/2394/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+  "../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
+  "../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

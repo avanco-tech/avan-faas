@@ -351,12 +351,6 @@ proc create_root_design { parentCell } {
    CONFIG.RP_IS_MASTER {false} \
  ] $dfx_axi_shutdown_man_1
 
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
- ] $xlconstant_0
-
   # Create instance: xlconstant_1, and set properties
   set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
   set_property -dict [ list \
@@ -373,8 +367,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ARESETN_1 [get_bd_ports rstn_to_user] [get_bd_pins custom_logic/rstn_to_user] [get_bd_pins dfx_axi_shutdown_man_0/resetn] [get_bd_pins dfx_axi_shutdown_man_1/resetn]
   connect_bd_net -net axi_intc_0_irq [get_bd_ports intr_user] [get_bd_pins custom_logic/intr_user]
   connect_bd_net -net clk_to_rm [get_bd_ports clk_to_rm] [get_bd_pins custom_logic/clk_to_rm] [get_bd_pins dfx_axi_shutdown_man_0/clk] [get_bd_pins dfx_axi_shutdown_man_1/clk]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins dfx_axi_shutdown_man_0/request_shutdown] [get_bd_pins xlconstant_0/dout]
-  connect_bd_net -net xlconstant_1_dout [get_bd_pins dfx_axi_shutdown_man_1/request_shutdown] [get_bd_pins xlconstant_1/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins dfx_axi_shutdown_man_0/request_shutdown] [get_bd_pins dfx_axi_shutdown_man_1/request_shutdown] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
   assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces custom_logic/axi_dma_0/Data_MM2S] [get_bd_addr_segs S_AXI_HP0_FPD/Reg] -force

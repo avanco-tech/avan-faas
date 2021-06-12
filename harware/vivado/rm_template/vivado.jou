@@ -2,14 +2,30 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Jun 10 20:18:27 2021
-# Process ID: 700
-# Current directory: /home/avanpc/avanco/git_repos/ali/avan-faas/vivado/rm_template
+# Start of session at: Sat Jun 12 13:36:51 2021
+# Process ID: 23966
+# Current directory: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template
 # Command line: vivado rm_template.xpr
-# Log file: /home/avanpc/avanco/git_repos/ali/avan-faas/vivado/rm_template/vivado.log
-# Journal file: /home/avanpc/avanco/git_repos/ali/avan-faas/vivado/rm_template/vivado.jou
+# Log file: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/vivado.log
+# Journal file: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project rm_template.xpr
-open_bd_design {/home/avanpc/avanco/git_repos/ali/avan-faas/vivado/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd}
 update_compile_order -fileset sources_1
+open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd}
+set_property screensize {203 166} [get_bd_cells custom_logic]
+delete_bd_objs [get_bd_nets xlconstant_0_dout] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins dfx_axi_shutdown_man_0/request_shutdown]
+save_bd_design
+source ../tcl_files/generate_dcp_from_design.tcl
+generate_target all [get_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_auto_ds_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
+export_ip_user_files -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files/sim_scripts -ip_user_files_dir /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files -ipstatic_source_dir /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/modelsim} {questa=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/questa} {ies=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/ies} {xcelium=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/xcelium} {vcs=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/vcs} {riviera=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property screensize {226 138} [get_bd_cells custom_logic]
+dcp_gen {}
+open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd}

@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Wed Jun  9 18:19:09 2021
+//Date        : Sat Jun 12 13:40:16 2021
 //Host        : avanpc running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -666,7 +666,7 @@ module custom_logic_imp_1VO6KPG
         .dout(xlconcat_0_dout));
 endmodule
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=23,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=22,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (M_AXI_HPM0_FPD_araddr,
     M_AXI_HPM0_FPD_arburst,
@@ -1002,7 +1002,6 @@ module design_1
   wire dfx_axi_shutdown_man_0_M_AXI_WREADY;
   wire [15:0]dfx_axi_shutdown_man_0_M_AXI_WSTRB;
   wire dfx_axi_shutdown_man_0_M_AXI_WVALID;
-  wire [0:0]xlconstant_0_dout;
   wire [0:0]xlconstant_1_dout;
 
   assign ARESETN_1 = rstn_to_user[0];
@@ -1214,7 +1213,7 @@ module design_1
         .m_axi_wready(dfx_axi_shutdown_man_0_M_AXI_WREADY),
         .m_axi_wstrb(dfx_axi_shutdown_man_0_M_AXI_WSTRB),
         .m_axi_wvalid(dfx_axi_shutdown_man_0_M_AXI_WVALID),
-        .request_shutdown(xlconstant_0_dout),
+        .request_shutdown(xlconstant_1_dout),
         .resetn(ARESETN_1),
         .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_interconnect_1_M00_AXI_ARADDR}),
         .s_axi_arburst(axi_interconnect_1_M00_AXI_ARBURST),
@@ -1341,8 +1340,6 @@ module design_1
         .s_axi_wready(M_AXI_HPM0_FPD_1_WREADY),
         .s_axi_wstrb(M_AXI_HPM0_FPD_1_WSTRB),
         .s_axi_wvalid(M_AXI_HPM0_FPD_1_WVALID));
-  design_1_xlconstant_0_0 xlconstant_0
-       (.dout(xlconstant_0_dout));
   design_1_xlconstant_1_0 xlconstant_1
        (.dout(xlconstant_1_dout));
 endmodule

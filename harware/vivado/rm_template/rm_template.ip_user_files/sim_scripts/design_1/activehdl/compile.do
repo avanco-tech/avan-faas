@@ -18,10 +18,6 @@ vlib activehdl/axi_infrastructure_v1_1_0
 vlib activehdl/axi_register_slice_v2_1_22
 vlib activehdl/axi_data_fifo_v2_1_21
 vlib activehdl/axi_crossbar_v2_1_23
-vlib activehdl/axi_protocol_converter_v2_1_22
-vlib activehdl/axi_clock_converter_v2_1_21
-vlib activehdl/blk_mem_gen_v8_4_4
-vlib activehdl/axi_dwidth_converter_v2_1_22
 vlib activehdl/xbip_utils_v3_0_10
 vlib activehdl/axi_utils_v2_0_6
 vlib activehdl/xbip_pipe_v3_0_6
@@ -34,6 +30,10 @@ vlib activehdl/floating_point_v7_1_11
 vlib activehdl/xlconcat_v2_1_4
 vlib activehdl/dfx_axi_shutdown_manager_v1_0_0
 vlib activehdl/xlconstant_v1_1_7
+vlib activehdl/axi_protocol_converter_v2_1_22
+vlib activehdl/axi_clock_converter_v2_1_21
+vlib activehdl/blk_mem_gen_v8_4_4
+vlib activehdl/axi_dwidth_converter_v2_1_22
 
 vmap xpm activehdl/xpm
 vmap lib_pkg_v1_0_2 activehdl/lib_pkg_v1_0_2
@@ -52,10 +52,6 @@ vmap axi_infrastructure_v1_1_0 activehdl/axi_infrastructure_v1_1_0
 vmap axi_register_slice_v2_1_22 activehdl/axi_register_slice_v2_1_22
 vmap axi_data_fifo_v2_1_21 activehdl/axi_data_fifo_v2_1_21
 vmap axi_crossbar_v2_1_23 activehdl/axi_crossbar_v2_1_23
-vmap axi_protocol_converter_v2_1_22 activehdl/axi_protocol_converter_v2_1_22
-vmap axi_clock_converter_v2_1_21 activehdl/axi_clock_converter_v2_1_21
-vmap blk_mem_gen_v8_4_4 activehdl/blk_mem_gen_v8_4_4
-vmap axi_dwidth_converter_v2_1_22 activehdl/axi_dwidth_converter_v2_1_22
 vmap xbip_utils_v3_0_10 activehdl/xbip_utils_v3_0_10
 vmap axi_utils_v2_0_6 activehdl/axi_utils_v2_0_6
 vmap xbip_pipe_v3_0_6 activehdl/xbip_pipe_v3_0_6
@@ -68,6 +64,10 @@ vmap floating_point_v7_1_11 activehdl/floating_point_v7_1_11
 vmap xlconcat_v2_1_4 activehdl/xlconcat_v2_1_4
 vmap dfx_axi_shutdown_manager_v1_0_0 activehdl/dfx_axi_shutdown_manager_v1_0_0
 vmap xlconstant_v1_1_7 activehdl/xlconstant_v1_1_7
+vmap axi_protocol_converter_v2_1_22 activehdl/axi_protocol_converter_v2_1_22
+vmap axi_clock_converter_v2_1_21 activehdl/axi_clock_converter_v2_1_21
+vmap blk_mem_gen_v8_4_4 activehdl/blk_mem_gen_v8_4_4
+vmap axi_dwidth_converter_v2_1_22 activehdl/axi_dwidth_converter_v2_1_22
 
 vlog -work xpm  -sv2k12 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "/home/avanpc/tools/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -136,25 +136,7 @@ vlog -work axi_crossbar_v2_1_23  -v2k5 "+incdir+../../../../rm_template.gen/sour
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
-
-vlog -work axi_protocol_converter_v2_1_22  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
-
-vlog -work axi_clock_converter_v2_1_21  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/1304/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
-
-vlog -work blk_mem_gen_v8_4_4  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
-
-vlog -work axi_dwidth_converter_v2_1_22  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/2394/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
-"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 "../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
-"../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
-"../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
 
 vcom -work xbip_utils_v3_0_10 -93 \
 "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/d117/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -206,9 +188,26 @@ vlog -work xlconstant_v1_1_7  -v2k5 "+incdir+../../../../rm_template.gen/sources
 "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
 "../../../bd/design_1/ip/design_1_xlconstant_1_0/sim/design_1_xlconstant_1_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
+
+vlog -work axi_protocol_converter_v2_1_22  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+
+vlog -work axi_clock_converter_v2_1_21  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/1304/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+
+vlog -work blk_mem_gen_v8_4_4  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work axi_dwidth_converter_v2_1_22  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/2394/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
+"../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
