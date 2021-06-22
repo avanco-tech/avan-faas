@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Wed Jun  9 18:23:21 2021
+| Date         : Tue Jun 22 21:11:36 2021
 | Host         : avanpc running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file design_1_floating_point_0_0_utilization_synth.rpt -pb design_1_floating_point_0_0_utilization_synth.pb
 | Design       : design_1_floating_point_0_0
@@ -31,15 +31,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  |  402 |     0 |    230400 |  0.17 |
-|   LUT as Logic             |  152 |     0 |    230400 |  0.07 |
-|   LUT as Memory            |  250 |     0 |    101760 |  0.25 |
+| CLB LUTs*                  |  204 |     0 |    230400 |  0.09 |
+|   LUT as Logic             |   91 |     0 |    230400 |  0.04 |
+|   LUT as Memory            |  113 |     0 |    101760 |  0.11 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |  250 |     0 |           |       |
-| CLB Registers              |  722 |     0 |    460800 |  0.16 |
-|   Register as Flip Flop    |  722 |     0 |    460800 |  0.16 |
+|     LUT as Shift Register  |  113 |     0 |           |       |
+| CLB Registers              |  350 |     0 |    460800 |  0.08 |
+|   Register as Flip Flop    |  350 |     0 |    460800 |  0.08 |
 |   Register as Latch        |    0 |     0 |    460800 |  0.00 |
-| CARRY8                     |    9 |     0 |     28800 |  0.03 |
+| CARRY8                     |    5 |     0 |     28800 |  0.02 |
 | F7 Muxes                   |    0 |     0 |    115200 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     57600 |  0.00 |
 | F9 Muxes                   |    0 |     0 |     28800 |  0.00 |
@@ -62,22 +62,21 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 722   |          Yes |       Reset |            - |
+| 350   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
 2. BLOCKRAM
 -----------
 
-+-------------------+------+-------+-----------+-------+
-|     Site Type     | Used | Fixed | Available | Util% |
-+-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |  0.5 |     0 |       312 |  0.16 |
-|   RAMB36/FIFO*    |    0 |     0 |       312 |  0.00 |
-|   RAMB18          |    1 |     0 |       624 |  0.16 |
-|     RAMB18E2 only |    1 |       |           |       |
-| URAM              |    0 |     0 |        96 |  0.00 |
-+-------------------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |       312 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |       312 |  0.00 |
+|   RAMB18       |    0 |     0 |       624 |  0.00 |
+| URAM           |    0 |     0 |        96 |  0.00 |
++----------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
 
 
@@ -87,8 +86,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |   14 |     0 |      1728 |  0.81 |
-|   DSP48E2 only |   14 |       |           |       |
+| DSPs           |    8 |     0 |      1728 |  0.46 |
+|   DSP48E2 only |    8 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -159,18 +158,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  722 |            Register |
-| SRL16E   |  236 |                 CLB |
-| LUT3     |   73 |                 CLB |
-| LUT2     |   72 |                 CLB |
-| LUT6     |   21 |                 CLB |
-| SRLC32E  |   18 |                 CLB |
-| DSP48E2  |   14 |          Arithmetic |
-| LUT5     |   13 |                 CLB |
-| LUT1     |   10 |                 CLB |
-| CARRY8   |    9 |                 CLB |
-| LUT4     |    5 |                 CLB |
-| RAMB18E2 |    1 |            BLOCKRAM |
+| FDRE     |  350 |            Register |
+| SRL16E   |   99 |                 CLB |
+| LUT3     |   51 |                 CLB |
+| LUT2     |   38 |                 CLB |
+| SRLC32E  |   14 |                 CLB |
+| LUT5     |   12 |                 CLB |
+| LUT6     |    9 |                 CLB |
+| DSP48E2  |    8 |          Arithmetic |
+| LUT4     |    6 |                 CLB |
+| LUT1     |    5 |                 CLB |
+| CARRY8   |    5 |                 CLB |
 +----------+------+---------------------+
 
 

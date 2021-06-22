@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Sat Jun 12 13:40:16 2021
+//Date        : Tue Jun 22 21:10:13 2021
 //Host        : avanpc running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -92,9 +92,12 @@ module design_1_wrapper
     S_AXI_HP0_FPD_wready,
     S_AXI_HP0_FPD_wstrb,
     S_AXI_HP0_FPD_wvalid,
-    clk_to_rm,
-    intr_user,
-    rstn_to_user);
+    clk_100MHz,
+    clk_150MHz,
+    clk_200MHz,
+    clk_240MHz,
+    intr,
+    rstn);
   input [39:0]M_AXI_HPM0_FPD_araddr;
   input [1:0]M_AXI_HPM0_FPD_arburst;
   input [3:0]M_AXI_HPM0_FPD_arcache;
@@ -177,9 +180,12 @@ module design_1_wrapper
   input S_AXI_HP0_FPD_wready;
   output [15:0]S_AXI_HP0_FPD_wstrb;
   output S_AXI_HP0_FPD_wvalid;
-  input clk_to_rm;
-  output [0:0]intr_user;
-  input [0:0]rstn_to_user;
+  input clk_100MHz;
+  input clk_150MHz;
+  input clk_200MHz;
+  input clk_240MHz;
+  output [0:0]intr;
+  input [0:0]rstn;
 
   wire [39:0]M_AXI_HPM0_FPD_araddr;
   wire [1:0]M_AXI_HPM0_FPD_arburst;
@@ -263,9 +269,12 @@ module design_1_wrapper
   wire S_AXI_HP0_FPD_wready;
   wire [15:0]S_AXI_HP0_FPD_wstrb;
   wire S_AXI_HP0_FPD_wvalid;
-  wire clk_to_rm;
-  wire [0:0]intr_user;
-  wire [0:0]rstn_to_user;
+  wire clk_100MHz;
+  wire clk_150MHz;
+  wire clk_200MHz;
+  wire clk_240MHz;
+  wire [0:0]intr;
+  wire [0:0]rstn;
 
   design_1 design_1_i
        (.M_AXI_HPM0_FPD_araddr(M_AXI_HPM0_FPD_araddr),
@@ -350,7 +359,10 @@ module design_1_wrapper
         .S_AXI_HP0_FPD_wready(S_AXI_HP0_FPD_wready),
         .S_AXI_HP0_FPD_wstrb(S_AXI_HP0_FPD_wstrb),
         .S_AXI_HP0_FPD_wvalid(S_AXI_HP0_FPD_wvalid),
-        .clk_to_rm(clk_to_rm),
-        .intr_user(intr_user),
-        .rstn_to_user(rstn_to_user));
+        .clk_100MHz(clk_100MHz),
+        .clk_150MHz(clk_150MHz),
+        .clk_200MHz(clk_200MHz),
+        .clk_240MHz(clk_240MHz),
+        .intr(intr),
+        .rstn(rstn));
 endmodule

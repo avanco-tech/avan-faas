@@ -80,8 +80,8 @@ module design_1_auto_us_1 (
   input bit [3 : 0] s_axi_awqos,
   input bit_as_bool s_axi_awvalid,
   output bit_as_bool s_axi_awready,
-  input bit [63 : 0] s_axi_wdata,
-  input bit [7 : 0] s_axi_wstrb,
+  input bit [31 : 0] s_axi_wdata,
+  input bit [3 : 0] s_axi_wstrb,
   input bit_as_bool s_axi_wlast,
   input bit_as_bool s_axi_wvalid,
   output bit_as_bool s_axi_wready,
@@ -129,8 +129,8 @@ module design_1_auto_us_1 (s_axi_aclk,s_axi_aresetn,s_axi_awaddr,s_axi_awlen,s_a
   input bit [3 : 0] s_axi_awqos;
   input bit s_axi_awvalid;
   output wire s_axi_awready;
-  input bit [63 : 0] s_axi_wdata;
-  input bit [7 : 0] s_axi_wstrb;
+  input bit [31 : 0] s_axi_wdata;
+  input bit [3 : 0] s_axi_wstrb;
   input bit s_axi_wlast;
   input bit s_axi_wvalid;
   output wire s_axi_wready;
@@ -175,8 +175,8 @@ module design_1_auto_us_1 (s_axi_aclk,s_axi_aresetn,s_axi_awaddr,s_axi_awlen,s_a
   input bit [3 : 0] s_axi_awqos;
   input bit s_axi_awvalid;
   output wire s_axi_awready;
-  input bit [63 : 0] s_axi_wdata;
-  input bit [7 : 0] s_axi_wstrb;
+  input bit [31 : 0] s_axi_wdata;
+  input bit [3 : 0] s_axi_wstrb;
   input bit s_axi_wlast;
   input bit s_axi_wvalid;
   output wire s_axi_wready;

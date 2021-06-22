@@ -2,22 +2,20 @@ vlib questa_lib/work
 vlib questa_lib/msim
 
 vlib questa_lib/msim/xpm
-vlib questa_lib/msim/lib_pkg_v1_0_2
+vlib questa_lib/msim/generic_baseblocks_v2_1_0
+vlib questa_lib/msim/axi_infrastructure_v1_1_0
+vlib questa_lib/msim/axi_register_slice_v2_1_22
 vlib questa_lib/msim/fifo_generator_v13_2_5
+vlib questa_lib/msim/axi_data_fifo_v2_1_21
+vlib questa_lib/msim/axi_crossbar_v2_1_23
+vlib questa_lib/msim/xil_defaultlib
+vlib questa_lib/msim/lib_pkg_v1_0_2
 vlib questa_lib/msim/lib_fifo_v1_0_14
 vlib questa_lib/msim/lib_srl_fifo_v1_0_2
 vlib questa_lib/msim/lib_cdc_v1_0_2
 vlib questa_lib/msim/axi_datamover_v5_1_24
 vlib questa_lib/msim/axi_sg_v4_1_13
 vlib questa_lib/msim/axi_dma_v7_1_23
-vlib questa_lib/msim/xil_defaultlib
-vlib questa_lib/msim/axi_lite_ipif_v3_0_4
-vlib questa_lib/msim/axi_intc_v4_1_15
-vlib questa_lib/msim/generic_baseblocks_v2_1_0
-vlib questa_lib/msim/axi_infrastructure_v1_1_0
-vlib questa_lib/msim/axi_register_slice_v2_1_22
-vlib questa_lib/msim/axi_data_fifo_v2_1_21
-vlib questa_lib/msim/axi_crossbar_v2_1_23
 vlib questa_lib/msim/xbip_utils_v3_0_10
 vlib questa_lib/msim/axi_utils_v2_0_6
 vlib questa_lib/msim/xbip_pipe_v3_0_6
@@ -27,7 +25,10 @@ vlib questa_lib/msim/xbip_dsp48_multadd_v3_0_6
 vlib questa_lib/msim/xbip_bram18k_v3_0_6
 vlib questa_lib/msim/mult_gen_v12_0_16
 vlib questa_lib/msim/floating_point_v7_1_11
+vlib questa_lib/msim/axi_lite_ipif_v3_0_4
+vlib questa_lib/msim/axi_intc_v4_1_15
 vlib questa_lib/msim/xlconcat_v2_1_4
+vlib questa_lib/msim/proc_sys_reset_v5_0_13
 vlib questa_lib/msim/dfx_axi_shutdown_manager_v1_0_0
 vlib questa_lib/msim/xlconstant_v1_1_7
 vlib questa_lib/msim/axi_protocol_converter_v2_1_22
@@ -36,22 +37,20 @@ vlib questa_lib/msim/blk_mem_gen_v8_4_4
 vlib questa_lib/msim/axi_dwidth_converter_v2_1_22
 
 vmap xpm questa_lib/msim/xpm
-vmap lib_pkg_v1_0_2 questa_lib/msim/lib_pkg_v1_0_2
+vmap generic_baseblocks_v2_1_0 questa_lib/msim/generic_baseblocks_v2_1_0
+vmap axi_infrastructure_v1_1_0 questa_lib/msim/axi_infrastructure_v1_1_0
+vmap axi_register_slice_v2_1_22 questa_lib/msim/axi_register_slice_v2_1_22
 vmap fifo_generator_v13_2_5 questa_lib/msim/fifo_generator_v13_2_5
+vmap axi_data_fifo_v2_1_21 questa_lib/msim/axi_data_fifo_v2_1_21
+vmap axi_crossbar_v2_1_23 questa_lib/msim/axi_crossbar_v2_1_23
+vmap xil_defaultlib questa_lib/msim/xil_defaultlib
+vmap lib_pkg_v1_0_2 questa_lib/msim/lib_pkg_v1_0_2
 vmap lib_fifo_v1_0_14 questa_lib/msim/lib_fifo_v1_0_14
 vmap lib_srl_fifo_v1_0_2 questa_lib/msim/lib_srl_fifo_v1_0_2
 vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
 vmap axi_datamover_v5_1_24 questa_lib/msim/axi_datamover_v5_1_24
 vmap axi_sg_v4_1_13 questa_lib/msim/axi_sg_v4_1_13
 vmap axi_dma_v7_1_23 questa_lib/msim/axi_dma_v7_1_23
-vmap xil_defaultlib questa_lib/msim/xil_defaultlib
-vmap axi_lite_ipif_v3_0_4 questa_lib/msim/axi_lite_ipif_v3_0_4
-vmap axi_intc_v4_1_15 questa_lib/msim/axi_intc_v4_1_15
-vmap generic_baseblocks_v2_1_0 questa_lib/msim/generic_baseblocks_v2_1_0
-vmap axi_infrastructure_v1_1_0 questa_lib/msim/axi_infrastructure_v1_1_0
-vmap axi_register_slice_v2_1_22 questa_lib/msim/axi_register_slice_v2_1_22
-vmap axi_data_fifo_v2_1_21 questa_lib/msim/axi_data_fifo_v2_1_21
-vmap axi_crossbar_v2_1_23 questa_lib/msim/axi_crossbar_v2_1_23
 vmap xbip_utils_v3_0_10 questa_lib/msim/xbip_utils_v3_0_10
 vmap axi_utils_v2_0_6 questa_lib/msim/axi_utils_v2_0_6
 vmap xbip_pipe_v3_0_6 questa_lib/msim/xbip_pipe_v3_0_6
@@ -61,7 +60,10 @@ vmap xbip_dsp48_multadd_v3_0_6 questa_lib/msim/xbip_dsp48_multadd_v3_0_6
 vmap xbip_bram18k_v3_0_6 questa_lib/msim/xbip_bram18k_v3_0_6
 vmap mult_gen_v12_0_16 questa_lib/msim/mult_gen_v12_0_16
 vmap floating_point_v7_1_11 questa_lib/msim/floating_point_v7_1_11
+vmap axi_lite_ipif_v3_0_4 questa_lib/msim/axi_lite_ipif_v3_0_4
+vmap axi_intc_v4_1_15 questa_lib/msim/axi_intc_v4_1_15
 vmap xlconcat_v2_1_4 questa_lib/msim/xlconcat_v2_1_4
+vmap proc_sys_reset_v5_0_13 questa_lib/msim/proc_sys_reset_v5_0_13
 vmap dfx_axi_shutdown_manager_v1_0_0 questa_lib/msim/dfx_axi_shutdown_manager_v1_0_0
 vmap xlconstant_v1_1_7 questa_lib/msim/xlconstant_v1_1_7
 vmap axi_protocol_converter_v2_1_22 questa_lib/msim/axi_protocol_converter_v2_1_22
@@ -77,8 +79,14 @@ vlog -work xpm -64 -sv "+incdir+../../../../rm_template.gen/sources_1/bd/design_
 vcom -work xpm -64 -93 \
 "/home/avanpc/tools/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vcom -work lib_pkg_v1_0_2 -64 -93 \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
+vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+
+vlog -work axi_infrastructure_v1_1_0 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
+
+vlog -work axi_register_slice_v2_1_22 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
 vlog -work fifo_generator_v13_2_5 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
@@ -88,6 +96,18 @@ vcom -work fifo_generator_v13_2_5 -64 -93 \
 
 vlog -work fifo_generator_v13_2_5 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v" \
+
+vlog -work axi_data_fifo_v2_1_21 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/54c0/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
+
+vlog -work axi_crossbar_v2_1_23 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/bc0a/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+"../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
+
+vcom -work lib_pkg_v1_0_2 -64 -93 \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
 
 vcom -work lib_fifo_v1_0_14 -64 -93 \
 "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd" \
@@ -109,34 +129,6 @@ vcom -work axi_dma_v7_1_23 -64 -93 \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/ip/design_1_axi_dma_0_0/sim/design_1_axi_dma_0_0.vhd" \
-
-vcom -work axi_lite_ipif_v3_0_4 -64 -93 \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
-
-vcom -work axi_intc_v4_1_15 -64 -93 \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/47b8/hdl/axi_intc_v4_1_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/design_1/ip/design_1_axi_intc_0_0/sim/design_1_axi_intc_0_0.vhd" \
-
-vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
-
-vlog -work axi_infrastructure_v1_1_0 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
-
-vlog -work axi_register_slice_v2_1_22 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" \
-
-vlog -work axi_data_fifo_v2_1_21 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/54c0/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
-
-vlog -work axi_crossbar_v2_1_23 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/bc0a/hdl/axi_crossbar_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
-"../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
 
 vcom -work xbip_utils_v3_0_10 -64 -93 \
 "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/d117/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -170,12 +162,28 @@ vlog -work floating_point_v7_1_11 -64 "+incdir+../../../../rm_template.gen/sourc
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_floating_point_0_0/sim/design_1_floating_point_0_0.v" \
+"../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+
+vcom -work axi_lite_ipif_v3_0_4 -64 -93 \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+
+vcom -work axi_intc_v4_1_15 -64 -93 \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/47b8/hdl/axi_intc_v4_1_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/design_1/ip/design_1_axi_intc_0_0/sim/design_1_axi_intc_0_0.vhd" \
 
 vlog -work xlconcat_v2_1_4 -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../rm_template.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_xlconcat_0_0/sim/design_1_xlconcat_0_0.v" \
+
+vcom -work proc_sys_reset_v5_0_13 -64 -93 \
+"../../../../rm_template.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/design_1/ip/design_1_proc_sys_reset_0_0/sim/design_1_proc_sys_reset_0_0.vhd" \
 
 vcom -work dfx_axi_shutdown_manager_v1_0_0 -64 -93 \
 "../../../../rm_template.gen/sources_1/bd/design_1/ipshared/0414/hdl/dfx_axi_shutdown_manager_v1_0_vh_rfs.vhd" \
@@ -208,6 +216,7 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../rm_template.gen/sources_1/bd/
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 "../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
 "../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
+"../../../bd/design_1/ip/design_1_auto_cc_0/sim/design_1_auto_cc_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

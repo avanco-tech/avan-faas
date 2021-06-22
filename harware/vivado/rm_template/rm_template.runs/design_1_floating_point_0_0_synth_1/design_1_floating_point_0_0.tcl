@@ -70,7 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_floating_point_0_0_synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-395-avanpc/incrSyn
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param synth.incremental.totalBlackboxInstancesCount 14
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-8553-avanpc/incrSyn
+set_param power.BramSDPPropagationFix 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true

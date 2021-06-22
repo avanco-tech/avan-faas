@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Wed Jun  9 18:22:42 2021
+// Date        : Tue Jun 15 13:05:07 2021
 // Host        : avanpc running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top design_1_auto_us_1 -prefix
 //               design_1_auto_us_1_ design_1_auto_us_1_stub.v
@@ -22,7 +22,7 @@ module design_1_auto_us_1(s_axi_aclk, s_axi_aresetn, s_axi_awaddr,
   m_axi_awprot, m_axi_awregion, m_axi_awqos, m_axi_awvalid, m_axi_awready, m_axi_wdata, 
   m_axi_wstrb, m_axi_wlast, m_axi_wvalid, m_axi_wready, m_axi_bresp, m_axi_bvalid, 
   m_axi_bready)
-/* synthesis syn_black_box black_box_pad_pin="s_axi_aclk,s_axi_aresetn,s_axi_awaddr[31:0],s_axi_awlen[7:0],s_axi_awsize[2:0],s_axi_awburst[1:0],s_axi_awlock[0:0],s_axi_awcache[3:0],s_axi_awprot[2:0],s_axi_awregion[3:0],s_axi_awqos[3:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[63:0],s_axi_wstrb[7:0],s_axi_wlast,s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,m_axi_awaddr[31:0],m_axi_awlen[7:0],m_axi_awsize[2:0],m_axi_awburst[1:0],m_axi_awlock[0:0],m_axi_awcache[3:0],m_axi_awprot[2:0],m_axi_awregion[3:0],m_axi_awqos[3:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[127:0],m_axi_wstrb[15:0],m_axi_wlast,m_axi_wvalid,m_axi_wready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready" */;
+/* synthesis syn_black_box black_box_pad_pin="s_axi_aclk,s_axi_aresetn,s_axi_awaddr[31:0],s_axi_awlen[7:0],s_axi_awsize[2:0],s_axi_awburst[1:0],s_axi_awlock[0:0],s_axi_awcache[3:0],s_axi_awprot[2:0],s_axi_awregion[3:0],s_axi_awqos[3:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wlast,s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,m_axi_awaddr[31:0],m_axi_awlen[7:0],m_axi_awsize[2:0],m_axi_awburst[1:0],m_axi_awlock[0:0],m_axi_awcache[3:0],m_axi_awprot[2:0],m_axi_awregion[3:0],m_axi_awqos[3:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[127:0],m_axi_wstrb[15:0],m_axi_wlast,m_axi_wvalid,m_axi_wready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready" */;
   input s_axi_aclk;
   input s_axi_aresetn;
   input [31:0]s_axi_awaddr;
@@ -36,8 +36,8 @@ module design_1_auto_us_1(s_axi_aclk, s_axi_aresetn, s_axi_awaddr,
   input [3:0]s_axi_awqos;
   input s_axi_awvalid;
   output s_axi_awready;
-  input [63:0]s_axi_wdata;
-  input [7:0]s_axi_wstrb;
+  input [31:0]s_axi_wdata;
+  input [3:0]s_axi_wstrb;
   input s_axi_wlast;
   input s_axi_wvalid;
   output s_axi_wready;

@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Jun 12 13:36:51 2021
-# Process ID: 23966
+# Start of session at: Tue Jun 22 18:28:33 2021
+# Process ID: 8553
 # Current directory: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template
 # Command line: vivado rm_template.xpr
 # Log file: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/vivado.log
@@ -14,38 +14,123 @@ open_project rm_template.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/avanpc/avanco/vivado_projects/dfx_files/outputs/ip/simple-axi-lite-counter'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/avanpc/avanco/vivado_projects/dfx_files/outputs/ip/simple-stream-ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/avanpc/tools/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 7490.578 ; gain = 115.367 ; free physical = 19478 ; free virtual = 41679
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 7463.551 ; gain = 85.344 ; free physical = 2392 ; free virtual = 24696
 INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 update_compile_order -fileset sources_1
 open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd}
 Reading block design file </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd>...
-Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
-Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- user.org:user:simple_axi_lite_counter_by_1:1.0 - simple_axi_lite_coun_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /custom_logic/axi_dma_0/M_AXIS_MM2S. Setting parameter on /custom_logic/axi_dma_0/M_AXIS_MM2S failed
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_0
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_1
 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
-Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_0
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
 Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0_250MHz
 Adding component instance block -- xilinx.com:ip:dfx_axi_shutdown_manager:1.0 - dfx_axi_shutdown_man_0
 Adding component instance block -- xilinx.com:ip:dfx_axi_shutdown_manager:1.0 - dfx_axi_shutdown_man_1
-Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
 Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
 Successfully read diagram <design_1> from block design file </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 8954.492 ; gain = 1192.789 ; free physical = 19277 ; free virtual = 41485
-set_property screensize {203 166} [get_bd_cells custom_logic]
-delete_bd_objs [get_bd_nets xlconstant_0_dout] [get_bd_cells xlconstant_0]
-connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins dfx_axi_shutdown_man_0/request_shutdown]
+open_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 8874.969 ; gain = 1145.293 ; free physical = 1635 ; free virtual = 23946
+set_property CONFIG.FREQ_HZ 240000000 [get_bd_ports clk_250MHz]
+set_property name clk_240MHz [get_bd_ports clk_250MHz]
+save_bd_design
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property name clk_240MHz [get_bd_pins custom_logic/clk_250MHz]
+save_bd_design
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property name proc_sys_reset_0_240MHz [get_bd_cells custom_logic/proc_sys_reset_0_250MHz]
 save_bd_design
 Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
 Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
+set_property name aresetn_240MHz [get_bd_pins custom_logic/aresetn_250MHz]
+save_bd_design
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
+validate_bd_design
+INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /custom_logic/axi_interconnect_0/s00_couplers/auto_ds/S_AXI(0) and /dfx_axi_shutdown_man_1/M_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /custom_logic/axi_interconnect_0/s00_couplers/auto_ds/S_AXI(0) and /dfx_axi_shutdown_man_1/M_AXI(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /dfx_axi_shutdown_man_0/S_AXI(1) and /custom_logic/axi_interconnect_1/m00_couplers/auto_cc/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /dfx_axi_shutdown_man_0/S_AXI(1) and /custom_logic/axi_interconnect_1/m00_couplers/auto_cc/M_AXI(0)
+validate_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 9351.918 ; gain = 0.000 ; free physical = 1954 ; free virtual = 24314
+generate_target all [get_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/m_axi_rid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/m_axi_bid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_awid'(6) to pin: '/custom_logic/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_arid'(6) to pin: '/custom_logic/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/m_axi_rid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/m_axi_bid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_awid'(6) to pin: '/custom_logic/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_arid'(6) to pin: '/custom_logic/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/proc_sys_reset_0_240MHz .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dfx_axi_shutdown_man_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/m00_couplers/auto_cc .
+Exporting to file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_proc_sys_reset_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_dfx_axi_shutdown_man_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_ds_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 437859158ef62afb; cache size = 43.423 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 3c04191bedeec1a1; cache size = 43.423 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 112fcdee5a5c6e44; cache size = 43.423 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_1, cache-ID = b16fabbf10394078; cache size = 43.423 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_cc_0] }
+export_ip_user_files -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_dfx_axi_shutdown_man_0_0_synth_1 design_1_proc_sys_reset_0_0_synth_1 design_1_auto_cc_0_synth_1 -jobs 4
+[Tue Jun 22 18:51:07 2021] Launched design_1_dfx_axi_shutdown_man_0_0_synth_1, design_1_proc_sys_reset_0_0_synth_1, design_1_auto_cc_0_synth_1...
+Run output will be captured here:
+design_1_dfx_axi_shutdown_man_0_0_synth_1: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.runs/design_1_dfx_axi_shutdown_man_0_0_synth_1/runme.log
+design_1_proc_sys_reset_0_0_synth_1: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.runs/design_1_proc_sys_reset_0_0_synth_1/runme.log
+design_1_auto_cc_0_synth_1: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.runs/design_1_auto_cc_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files/sim_scripts -ip_user_files_dir /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files -ipstatic_source_dir /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/modelsim} {questa=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/questa} {ies=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/ies} {xcelium=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/xcelium} {vcs=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/vcs} {riviera=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
 source ../tcl_files/generate_dcp_from_design.tcl
 # proc dcp_gen {synth_options} {
 # 	global verbose
@@ -78,59 +163,6 @@ source ../tcl_files/generate_dcp_from_design.tcl
 # 	set end_time [clock seconds]
 # 	log_time write_checkpiont $start_time $end_time 0 "Write out synthesis DCP"
 # }
-generate_target all [get_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd]
-INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /custom_logic/axi_interconnect_0/s00_couplers/auto_ds/S_AXI(0) and /dfx_axi_shutdown_man_1/M_AXI(16)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /custom_logic/axi_interconnect_0/s00_couplers/auto_ds/S_AXI(0) and /dfx_axi_shutdown_man_1/M_AXI(16)
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /dfx_axi_shutdown_man_0/S_AXI(1) and /custom_logic/axi_interconnect_1/xbar/M00_AXI(0)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /dfx_axi_shutdown_man_0/S_AXI(1) and /custom_logic/axi_interconnect_1/xbar/M00_AXI(0)
-Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/xbar/m_axi_rid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/xbar/m_axi_bid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_awid'(6) to pin: '/custom_logic/M00_AXI_awid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_arid'(6) to pin: '/custom_logic/M00_AXI_arid'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/xbar/m_axi_rid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/xbar/m_axi_bid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_awid'(6) to pin: '/custom_logic/M00_AXI_awid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_arid'(6) to pin: '/custom_logic/M00_AXI_arid'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/sim/design_1.v
-VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
-Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/s00_couplers/auto_ds .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/s00_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/s01_couplers/auto_us .
-Exporting to file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.hwdef
-generate_target: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 9244.723 ; gain = 0.000 ; free physical = 19011 ; free virtual = 41251
-catch { config_ip_cache -export [get_ips -all design_1_auto_ds_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 437859158ef62afb; cache size = 22.721 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 3c04191bedeec1a1; cache size = 22.721 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 112fcdee5a5c6e44; cache size = 22.721 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_1, cache-ID = b16fabbf10394078; cache size = 22.721 MB.
-export_ip_user_files -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd]
-export_simulation -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files/sim_scripts -ip_user_files_dir /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files -ipstatic_source_dir /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/modelsim} {questa=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/questa} {ies=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/ies} {xcelium=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/xcelium} {vcs=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/vcs} {riviera=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-set_property screensize {226 138} [get_bd_cells custom_logic]
 dcp_gen {}
 # set modules             [list ]
 # set implementations     [list ]
@@ -3356,68 +3388,80 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev
 INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26042
+INFO: [Synth 8-7075] Helper process launched with PID 4872
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 10097.430 ; gain = 0.000 ; free physical = 17241 ; free virtual = 39492
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 10123.898 ; gain = 0.000 ; free physical = 5062 ; free virtual = 22828
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'rm_wrapper' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/dfx_project/rtl/rm_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:670]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:751]
 INFO: [Synth 8-6157] synthesizing module 'custom_logic_imp_1VO6KPG' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (1#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:411]
-WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:411]
-WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:411]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:411]
-WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 64 connections declared, but only 60 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:411]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_intc_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_axi_intc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_intc_0_0' (2#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_axi_intc_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1347]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_YFWIQX' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2782]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_YFWIQX' (3#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2782]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_14WV4ZS' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2907]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_14WV4ZS' (4#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2907]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_10XQKYZ' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3039]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (5#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (6#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_10XQKYZ' (7#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3039]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (8#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1850]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1850]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1850]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (9#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1347]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_1_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1891]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_TP5ICP' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2496]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_TP5ICP' (10#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2496]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_14KJ623' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3457]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (11#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_auto_us_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_0' is unconnected for instance 'auto_us' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3584]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_0' has 34 connections declared, but only 33 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3584]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_14KJ623' (12#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3457]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_YSJQ8A' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3620]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_auto_us_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_1' (13#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_auto_us_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_1' is unconnected for instance 'auto_us' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3771]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_1' has 40 connections declared, but only 39 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3771]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_YSJQ8A' (14#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3620]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_1' (15#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_xbar_1_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2467]
-WARNING: [Synth 8-689] width (128) of port connection 's_axi_rdata' does not match port width (256) of module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2484]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2485]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2487]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2488]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_1' is unconnected for instance 'xbar' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2417]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_1' is unconnected for instance 'xbar' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2417]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_1' has 78 connections declared, but only 76 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2417]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_1_0' (16#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1891]
-INFO: [Synth 8-6157] synthesizing module 'design_1_floating_point_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_floating_point_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_floating_point_0_0' (17#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_floating_point_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (1#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:443]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:443]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:443]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:443]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 64 connections declared, but only 60 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:443]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_intc_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_intc_0_0' (2#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1445]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_YFWIQX' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3166]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_YFWIQX' (3#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3166]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_14WV4ZS' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3312]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_14WV4ZS' (4#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3312]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_XU7B6Y' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3437]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_XU7B6Y' (5#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3437]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_10XQKYZ' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3569]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (6#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (7#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_10XQKYZ' (8#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3569]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_1' (9#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_xbar_1_stub.v:6]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (9) of module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2094]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (9) of module 'design_1_xbar_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2098]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (10#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1445]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_1_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_TP5ICP' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2750]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_cc_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_cc_0' (11#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_TP5ICP' (12#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2750]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_14KJ623' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3987]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (13#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_us_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_0' is unconnected for instance 'auto_us' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:4114]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_0' has 34 connections declared, but only 33 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:4114]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_14KJ623' (14#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:3987]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_YSJQ8A' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:4150]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_1' (15#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_auto_us_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_1' is unconnected for instance 'auto_us' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:4301]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_1' has 40 connections declared, but only 39 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:4301]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_YSJQ8A' (16#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:4150]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (17#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'design_1_xbar_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2721]
+WARNING: [Synth 8-689] width (128) of port connection 's_axi_rdata' does not match port width (256) of module 'design_1_xbar_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2738]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'design_1_xbar_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2739]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'design_1_xbar_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2741]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'design_1_xbar_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2742]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2671]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2671]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 78 connections declared, but only 76 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2671]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_1_0' (18#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'design_1_floating_point_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_floating_point_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_floating_point_0_0' (19#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_floating_point_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (20#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0_240MHz' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:715]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0_240MHz' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:715]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0_240MHz' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:715]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0_240MHz' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:715]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0_240MHz' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:715]
+INFO: [Synth 8-6157] synthesizing module 'design_1_simple_axi_lite_coun_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_simple_axi_lite_coun_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_simple_axi_lite_coun_0_0' (21#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_simple_axi_lite_coun_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -3550,67 +3594,71 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/avanp
 	Parameter IN127_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 2 - type: integer 
 	Parameter NUM_PORTS bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (18#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (19#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'custom_logic_imp_1VO6KPG' (20#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dfx_axi_shutdown_man_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_dfx_axi_shutdown_man_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dfx_axi_shutdown_man_0_0' (21#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_dfx_axi_shutdown_man_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'shutdown_requested' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-WARNING: [Synth 8-7071] port 'in_shutdown' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-WARNING: [Synth 8-7071] port 'irq' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-WARNING: [Synth 8-7071] port 'wr_irq' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-WARNING: [Synth 8-7071] port 'rd_irq' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-WARNING: [Synth 8-7071] port 'wr_in_shutdown' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-WARNING: [Synth 8-7071] port 'rd_in_shutdown' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-WARNING: [Synth 8-7023] instance 'dfx_axi_shutdown_man_0' of module 'design_1_dfx_axi_shutdown_man_0_0' has 92 connections declared, but only 85 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1173]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dfx_axi_shutdown_man_1_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_dfx_axi_shutdown_man_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dfx_axi_shutdown_man_1_0' (22#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-23966-avanpc/realtime/design_1_dfx_axi_shutdown_man_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'shutdown_requested' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7071] port 'in_shutdown' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7071] port 'irq' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7071] port 'wr_irq' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7071] port 'rd_irq' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7071] port 'wr_in_shutdown' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7071] port 'rd_in_shutdown' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7071] port 'm_axi_awuser' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7071] port 'm_axi_aruser' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
-WARNING: [Synth 8-7023] instance 'dfx_axi_shutdown_man_1' of module 'design_1_dfx_axi_shutdown_man_1_0' has 92 connections declared, but only 83 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1259]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (22#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (23#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'custom_logic_imp_1VO6KPG' (24#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dfx_axi_shutdown_man_0_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_dfx_axi_shutdown_man_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dfx_axi_shutdown_man_0_0' (25#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_dfx_axi_shutdown_man_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'shutdown_requested' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1271]
+WARNING: [Synth 8-7071] port 'in_shutdown' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1271]
+WARNING: [Synth 8-7071] port 'irq' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1271]
+WARNING: [Synth 8-7071] port 'wr_irq' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1271]
+WARNING: [Synth 8-7071] port 'rd_irq' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1271]
+WARNING: [Synth 8-7071] port 'wr_in_shutdown' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1271]
+WARNING: [Synth 8-7071] port 'rd_in_shutdown' of module 'design_1_dfx_axi_shutdown_man_0_0' is unconnected for instance 'dfx_axi_shutdown_man_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1271]
+WARNING: [Synth 8-7023] instance 'dfx_axi_shutdown_man_0' of module 'design_1_dfx_axi_shutdown_man_0_0' has 92 connections declared, but only 85 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1271]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dfx_axi_shutdown_man_1_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_dfx_axi_shutdown_man_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dfx_axi_shutdown_man_1_0' (26#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/.Xil/Vivado-8553-avanpc/realtime/design_1_dfx_axi_shutdown_man_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'shutdown_requested' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7071] port 'in_shutdown' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7071] port 'irq' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7071] port 'wr_irq' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7071] port 'rd_irq' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7071] port 'wr_in_shutdown' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7071] port 'rd_in_shutdown' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7071] port 'm_axi_awuser' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7071] port 'm_axi_aruser' of module 'design_1_dfx_axi_shutdown_man_1_0' is unconnected for instance 'dfx_axi_shutdown_man_1' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
+WARNING: [Synth 8-7023] instance 'dfx_axi_shutdown_man_1' of module 'design_1_dfx_axi_shutdown_man_1_0' has 92 connections declared, but only 83 given [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:1357]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_1_0' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1'b0 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (23#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_1_0' (24#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (25#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:670]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (26#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'rm_wrapper' (27#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/dfx_project/rtl/rm_wrapper.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (27#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_1_0' (28#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (29#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v:751]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (30#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'rm_wrapper' (31#1) [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/dfx_project/rtl/rm_wrapper.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 10097.430 ; gain = 0.000 ; free physical = 18020 ; free virtual = 40272
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 10123.898 ; gain = 0.000 ; free physical = 5991 ; free virtual = 23633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 10097.430 ; gain = 0.000 ; free physical = 18031 ; free virtual = 40283
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 10123.898 ; gain = 0.000 ; free physical = 5981 ; free virtual = 23624
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 10097.430 ; gain = 0.000 ; free physical = 18031 ; free virtual = 40283
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 10123.898 ; gain = 0.000 ; free physical = 5981 ; free virtual = 23624
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 10097.430 ; gain = 0.000 ; free physical = 17935 ; free virtual = 40274
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 10123.898 ; gain = 0.000 ; free physical = 5974 ; free virtual = 23617
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_simple_axi_lite_coun_0_0/design_1_simple_axi_lite_coun_0_0/design_1_simple_axi_lite_coun_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/simple_axi_lite_coun_0'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_simple_axi_lite_coun_0_0/design_1_simple_axi_lite_coun_0_0/design_1_simple_axi_lite_coun_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/simple_axi_lite_coun_0'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0'
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0'
-Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0'
-Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0'
-Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar'
-Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar'
-Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar'
-Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0/design_1_floating_point_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/floating_point_0'
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0/design_1_floating_point_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/floating_point_0'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_1_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_1_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_0'
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_0'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_1_0/design_1_dfx_axi_shutdown_man_1_0/design_1_dfx_axi_shutdown_man_1_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_1'
@@ -3623,15 +3671,17 @@ Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s00_couplers/auto_us'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s01_couplers/auto_us'
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s01_couplers/auto_us'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0/design_1_auto_cc_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/m00_couplers/auto_cc'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0/design_1_auto_cc_0_in_context.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/m00_couplers/auto_cc'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10161.457 ; gain = 0.000 ; free physical = 17949 ; free virtual = 40204
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10182.922 ; gain = 0.000 ; free physical = 5827 ; free virtual = 23566
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10161.457 ; gain = 0.000 ; free physical = 17949 ; free virtual = 40204
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 10182.922 ; gain = 0.000 ; free physical = 5827 ; free virtual = 23566
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 10161.457 ; gain = 64.027 ; free physical = 18010 ; free virtual = 40262
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 10182.922 ; gain = 59.023 ; free physical = 5989 ; free virtual = 23617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -3639,20 +3689,22 @@ Start Loading Part and Timing Information
 Loading part: xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 10161.457 ; gain = 64.027 ; free physical = 18010 ; free virtual = 40262
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 10182.922 ; gain = 59.023 ; free physical = 5989 ; free virtual = 23617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/simple_axi_lite_coun_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/floating_point_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/floating_point_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/xlconstant_1. (constraint file  auto generated constraint).
@@ -3660,11 +3712,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/cus
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s00_couplers/auto_us. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s01_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/m00_couplers/auto_cc. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 10161.457 ; gain = 64.027 ; free physical = 18010 ; free virtual = 40262
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 10182.922 ; gain = 59.023 ; free physical = 5990 ; free virtual = 23610
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 10161.457 ; gain = 64.027 ; free physical = 18010 ; free virtual = 40263
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 10182.922 ; gain = 59.023 ; free physical = 5977 ; free virtual = 23605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -3686,25 +3739,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 10161.457 ; gain = 64.027 ; free physical = 17994 ; free virtual = 40254
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 10182.922 ; gain = 59.023 ; free physical = 5814 ; free virtual = 23586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 10535.125 ; gain = 437.695 ; free physical = 17416 ; free virtual = 39673
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 10596.367 ; gain = 472.469 ; free physical = 5207 ; free virtual = 22878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 10554.125 ; gain = 456.695 ; free physical = 17413 ; free virtual = 39670
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 10597.367 ; gain = 473.469 ; free physical = 5205 ; free virtual = 22876
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 10605.559 ; gain = 508.129 ; free physical = 17410 ; free virtual = 39666
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 10617.406 ; gain = 493.508 ; free physical = 5193 ; free virtual = 22863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -3722,37 +3775,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 10610.562 ; gain = 513.133 ; free physical = 17342 ; free virtual = 39666
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 10623.344 ; gain = 499.445 ; free physical = 5164 ; free virtual = 22841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 10610.562 ; gain = 513.133 ; free physical = 17342 ; free virtual = 39666
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 10623.344 ; gain = 499.445 ; free physical = 5164 ; free virtual = 22841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 10610.562 ; gain = 513.133 ; free physical = 17336 ; free virtual = 39661
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 10623.344 ; gain = 499.445 ; free physical = 5169 ; free virtual = 22841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 10610.562 ; gain = 513.133 ; free physical = 17337 ; free virtual = 39661
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 10623.344 ; gain = 499.445 ; free physical = 5163 ; free virtual = 22842
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 10610.562 ; gain = 513.133 ; free physical = 17342 ; free virtual = 39666
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 10623.344 ; gain = 499.445 ; free physical = 5120 ; free virtual = 22842
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 10610.562 ; gain = 513.133 ; free physical = 17345 ; free virtual = 39666
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 10623.344 ; gain = 499.445 ; free physical = 5059 ; free virtual = 22842
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3764,51 +3817,60 @@ Report BlackBoxes:
 +------+----------------------------------+----------+
 |1     |design_1_dfx_axi_shutdown_man_0_0 |         1|
 |2     |design_1_dfx_axi_shutdown_man_1_0 |         1|
-|3     |design_1_xbar_0                   |         1|
+|3     |design_1_xbar_1                   |         1|
 |4     |design_1_auto_ds_0                |         1|
 |5     |design_1_auto_pc_0                |         1|
-|6     |design_1_xbar_1                   |         1|
-|7     |design_1_auto_us_0                |         1|
-|8     |design_1_auto_us_1                |         1|
-|9     |design_1_axi_dma_0_0              |         1|
-|10    |design_1_axi_intc_0_0             |         1|
-|11    |design_1_floating_point_0_0       |         1|
+|6     |design_1_xbar_0                   |         1|
+|7     |design_1_auto_cc_0                |         1|
+|8     |design_1_auto_us_0                |         1|
+|9     |design_1_auto_us_1                |         1|
+|10    |design_1_axi_dma_0_0              |         1|
+|11    |design_1_axi_intc_0_0             |         1|
+|12    |design_1_floating_point_0_0       |         1|
+|13    |design_1_proc_sys_reset_0_0       |         1|
+|14    |design_1_simple_axi_lite_coun_0_0 |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
 +------+--------------------------------+------+
 |      |Cell                            |Count |
 +------+--------------------------------+------+
-|1     |design_1_auto_ds                |     1|
-|2     |design_1_auto_pc                |     1|
-|3     |design_1_auto_us                |     2|
-|5     |design_1_axi_dma_0              |     1|
-|6     |design_1_axi_intc_0             |     1|
-|7     |design_1_dfx_axi_shutdown_man_0 |     1|
-|8     |design_1_dfx_axi_shutdown_man_1 |     1|
-|9     |design_1_floating_point_0       |     1|
-|10    |design_1_xbar                   |     2|
+|1     |design_1_auto_cc                |     1|
+|2     |design_1_auto_ds                |     1|
+|3     |design_1_auto_pc                |     1|
+|4     |design_1_auto_us                |     2|
+|6     |design_1_axi_dma_0              |     1|
+|7     |design_1_axi_intc_0             |     1|
+|8     |design_1_dfx_axi_shutdown_man_0 |     1|
+|9     |design_1_dfx_axi_shutdown_man_1 |     1|
+|10    |design_1_floating_point_0       |     1|
+|11    |design_1_proc_sys_reset_0       |     1|
+|12    |design_1_simple_axi_lite_coun_0 |     1|
+|13    |design_1_xbar                   |     2|
 +------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 10610.562 ; gain = 513.133 ; free physical = 17345 ; free virtual = 39666
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 10623.344 ; gain = 499.445 ; free physical = 5051 ; free virtual = 22842
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 10610.562 ; gain = 449.105 ; free physical = 17361 ; free virtual = 39705
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 10610.570 ; gain = 513.133 ; free physical = 17361 ; free virtual = 39705
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 10623.344 ; gain = 440.422 ; free physical = 5079 ; free virtual = 22879
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 10623.352 ; gain = 499.445 ; free physical = 5079 ; free virtual = 22879
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0.dcp' for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_1_0/design_1_dfx_axi_shutdown_man_1_0.dcp' for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_1'
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/floating_point_0'
-INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz'
+INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_simple_axi_lite_coun_0_0/design_1_simple_axi_lite_coun_0_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/simple_axi_lite_coun_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar'
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/s00_couplers/auto_ds'
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/s00_couplers/auto_pc'
-INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/m00_couplers/auto_cc'
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s00_couplers/auto_us'
 INFO: [Project 1-454] Reading design checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1.dcp' for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s01_couplers/auto_us'
-Netlist sorting complete. Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.24 . Memory (MB): peak = 10629.469 ; gain = 0.000 ; free physical = 17484 ; free virtual = 39741
-INFO: [Netlist 29-17] Analyzing 221 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.44 . Memory (MB): peak = 10659.125 ; gain = 0.000 ; free physical = 5280 ; free virtual = 22970
+INFO: [Netlist 29-17] Analyzing 477 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -3819,43 +3881,36 @@ WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0/U0'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0/U0'
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0/U0'
-Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0/U0'
-CRITICAL WARNING: [Constraints 18-1056] Clock 'm_axi_s2mm_aclk' completely overrides clock 'm_axi_mm2s_aclk'.
-New: create_clock -period 10.000 -name m_axi_s2mm_aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc:57]
-Previous: create_clock -period 10.000 -name m_axi_mm2s_aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc:55]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-CRITICAL WARNING: [Constraints 18-1056] Clock 's_axi_lite_aclk' completely overrides clock 'm_axi_s2mm_aclk'.
-New: create_clock -period 10.000 -name s_axi_lite_aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc:59]
-Previous: create_clock -period 10.000 -name m_axi_s2mm_aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc:57]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0/U0'
-Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0/U0'
-CRITICAL WARNING: [Constraints 18-1056] Clock 's_axi_aclk' completely overrides clock 's_axi_lite_aclk'.
-New: create_clock -period 10.000 -name s_axi_aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_ooc.xdc:57]
-Previous: create_clock -period 10.000 -name s_axi_lite_aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc:59]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0/U0'
-Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar/inst'
-CRITICAL WARNING: [Constraints 18-1056] Clock 'aclk' completely overrides clock 's_axi_aclk'.
-New: create_clock -period 10.000 -name aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc:55]
-Previous: create_clock -period 10.000 -name s_axi_aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_ooc.xdc:57]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar/inst'
-Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar/inst'
-WARNING: [Constraints 18-619] A clock with name 'aclk' already exists, overwriting the previous clock with the same name. [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_ooc.xdc:55]
-Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/xbar/inst'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz/U0'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz/U0'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz/U0'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz/U0'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar/inst'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_0/xbar/inst'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/floating_point_0/inst'
 WARNING: [Constraints 18-619] A clock with name 'aclk' already exists, overwriting the previous clock with the same name. [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0_ooc.xdc:55]
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/floating_point_0/inst'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz/U0'
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/proc_sys_reset_0_240MHz/U0'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_0/U0'
-CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'aclk'.
-New: create_clock -period 10.000 -name clk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0_ooc.xdc:55]
-Previous: create_clock -period 10.000 -name aclk [get_ports clk_to_rm], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0_ooc.xdc:55]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'slowest_sync_clk'.
+New: create_clock -period 4.167 -name clk [get_ports clk_240MHz], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0_ooc.xdc:55]
+Previous: create_clock -period 4.167 -name slowest_sync_clk [get_ports clk_240MHz], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc:55]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_0_0/design_1_dfx_axi_shutdown_man_0_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_0/U0'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_1_0/design_1_dfx_axi_shutdown_man_1_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_1/U0'
 WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_1_0/design_1_dfx_axi_shutdown_man_1_0_ooc.xdc:55]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'aclk'.
+New: create_clock -period 10.000 -name clk [get_ports clk_100MHz], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_1_0/design_1_dfx_axi_shutdown_man_1_0_ooc.xdc:55]
+Previous: create_clock -period 10.000 -name aclk [get_ports clk_100MHz], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_floating_point_0_0/design_1_floating_point_0_0_ooc.xdc:55]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_1_0/design_1_dfx_axi_shutdown_man_1_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/dfx_axi_shutdown_man_1/U0'
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/inst'
+CRITICAL WARNING: [Constraints 18-1056] Clock 's_axi_aclk' completely overrides clock 'clk'.
+New: create_clock -period 10.000 -name s_axi_aclk [get_ports clk_100MHz], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc:55]
+Previous: create_clock -period 10.000 -name clk [get_ports clk_100MHz], [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_dfx_axi_shutdown_man_1_0/design_1_dfx_axi_shutdown_man_1_0_ooc.xdc:55]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/inst'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0/U0'
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_dma_0/U0'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_clocks.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_intc_0/U0'
@@ -3866,26 +3921,133 @@ Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s00_couplers/auto_us/inst'
 Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s01_couplers/auto_us/inst'
 Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/s01_couplers/auto_us/inst'
-INFO: [Project 1-1715] 2 XPM XDC files have been applied to the design.
+Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc:16]
+Finished Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'i_design_1_wrapper/design_1_i/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/inst'
+INFO: [Project 1-1715] 4 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10792.082 ; gain = 0.000 ; free physical = 17367 ; free virtual = 39627
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 11046.145 ; gain = 0.000 ; free physical = 5082 ; free virtual = 22778
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 174 instances were transformed.
-  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
-  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 11 instances
-  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 160 instances
+  A total of 192 instances were transformed.
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 192 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 44 Warnings, 5 Critical Warnings and 0 Errors encountered.
+94 Infos, 47 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:00:54 . Memory (MB): peak = 11113.953 ; gain = 1705.227 ; free physical = 17088 ; free virtual = 39349
-| synth_design        | 00h:00m:54s   | 13:42:12 Sat Jun 12 2021  | rm_wrapper                                                                            |
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:07 . Memory (MB): peak = 11187.586 ; gain = 1714.711 ; free physical = 4866 ; free virtual = 22596
+| synth_design        | 00h:01m:07s   | 18:54:11 Tue Jun 22 2021  | rm_wrapper                                                                            |
 | ------------------- | ------------- | ------------------------- | ------------------------------------------------------------------------------------- |
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 INFO: [Common 17-1381] The checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/results/dcp_files/rm_wrapper_synth.dcp' has been generated.
-| write_checkpiont    | 00h:00m:04s   | 13:43:06 Sat Jun 12 2021  | Write out synthesis DCP                                                               |
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 11435.500 ; gain = 247.914 ; free physical = 4876 ; free virtual = 22598
+| write_checkpiont    | 00h:00m:05s   | 18:55:18 Tue Jun 22 2021  | Write out synthesis DCP                                                               |
 | ------------------- | ------------- | ------------------------- | ------------------------------------------------------------------------------------- |
 open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.NUM_MI {2}] [get_bd_cells custom_logic/axi_interconnect_0]
+delete_bd_objs [get_bd_intf_nets custom_logic/axi_interconnect_0_M02_AXI]
+endgroup
+delete_bd_objs [get_bd_intf_nets custom_logic/axi_interconnect_0_M00_AXI] [get_bd_cells custom_logic/simple_axi_lite_coun_0]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins custom_logic/axi_interconnect_0/M00_AXI] [get_bd_intf_pins custom_logic/axi_intc_0/s_axi]
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+startgroup
+set_property -dict [list CONFIG.Operation_Type {Reciprocal} CONFIG.A_Precision_Type {Single} CONFIG.C_A_Exponent_Width {8} CONFIG.C_A_Fraction_Width {24} CONFIG.Result_Precision_Type {Single} CONFIG.C_Result_Exponent_Width {8} CONFIG.C_Result_Fraction_Width {24} CONFIG.C_Accum_Msb {32} CONFIG.C_Accum_Lsb {-31} CONFIG.C_Accum_Input_Msb {32} CONFIG.C_Mult_Usage {Full_Usage} CONFIG.C_Latency {30} CONFIG.C_Rate {1}] [get_bd_cells custom_logic/floating_point_0]
+endgroup
+save_bd_design
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
+assign_bd_address
+Slave segment '/custom_logic/axi_intc_0/S_AXI/Reg' is being assigned into address space '/M_AXI_HPM0_FPD' at <0xA000_0000 [ 64K ]>.
+save_bd_design
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
+generate_target all [get_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /custom_logic/axi_interconnect_0/s00_couplers/auto_ds/S_AXI(0) and /dfx_axi_shutdown_man_1/M_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /custom_logic/axi_interconnect_0/s00_couplers/auto_ds/S_AXI(0) and /dfx_axi_shutdown_man_1/M_AXI(16)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /custom_logic/floating_point_0/S_AXIS_A(4) and /custom_logic/axi_dma_0/M_AXIS_MM2S(8)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /dfx_axi_shutdown_man_0/S_AXI(1) and /custom_logic/axi_interconnect_1/m00_couplers/auto_cc/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /dfx_axi_shutdown_man_0/S_AXI(1) and /custom_logic/axi_interconnect_1/m00_couplers/auto_cc/M_AXI(0)
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/m_axi_rid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/m_axi_bid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/floating_point_0/s_axis_a_tdata'(32) to pin: '/custom_logic/axi_dma_0/m_axis_mm2s_tdata'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_awid'(6) to pin: '/custom_logic/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_arid'(6) to pin: '/custom_logic/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/m_axi_rid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/axi_interconnect_1/m00_couplers/auto_cc/m_axi_bid'(1) to pin: '/custom_logic/axi_interconnect_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/custom_logic/floating_point_0/s_axis_a_tdata'(32) to pin: '/custom_logic/axi_dma_0/m_axis_mm2s_tdata'(64) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_awid'(6) to pin: '/custom_logic/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dfx_axi_shutdown_man_0/s_axi_arid'(6) to pin: '/custom_logic/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/ui/bd_57e529e0.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/floating_point_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/m00_couplers/auto_cc .
+Exporting to file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 11649.789 ; gain = 0.000 ; free physical = 14071 ; free virtual = 34050
+catch { config_ip_cache -export [get_ips -all design_1_xbar_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_xbar_1, cache-ID = 98659e60b1b58d33; cache size = 49.758 MB.
+catch { [ delete_ip_run [get_ips -all design_1_xbar_1] ] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_dma_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_floating_point_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_ds_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 437859158ef62afb; cache size = 49.758 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 3c04191bedeec1a1; cache size = 49.758 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 112fcdee5a5c6e44; cache size = 49.758 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_1, cache-ID = d1746b8a8b7bbbdd; cache size = 49.758 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_cc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_cc_0, cache-ID = 9e1ce18e19717a4a; cache size = 49.758 MB.
+export_ip_user_files -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_floating_point_0_0_synth_1 design_1_axi_dma_0_0_synth_1 -jobs 4
+[Tue Jun 22 21:10:18 2021] Launched design_1_floating_point_0_0_synth_1, design_1_axi_dma_0_0_synth_1...
+Run output will be captured here:
+design_1_floating_point_0_0_synth_1: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.runs/design_1_floating_point_0_0_synth_1/runme.log
+design_1_axi_dma_0_0_synth_1: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.runs/design_1_axi_dma_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files/sim_scripts -ip_user_files_dir /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files -ipstatic_source_dir /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/modelsim} {questa=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/questa} {ies=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/ies} {xcelium=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/xcelium} {vcs=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/vcs} {riviera=/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+write_bd_tcl -force /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/design_1.tcl
+INFO: [BD 5-148] Tcl file written out </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/design_1.tcl>.
+
+write_bd_tcl -force /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/tcl_files/rm.tcl
+INFO: [BD 5-148] Tcl file written out </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/tcl_files/rm.tcl>.
+
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 12 13:43:58 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 23 00:19:54 2021...
