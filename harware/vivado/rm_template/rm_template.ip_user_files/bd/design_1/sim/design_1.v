@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Tue Jun 22 21:10:13 2021
+//Date        : Fri Jun 25 01:05:28 2021
 //Host        : avanpc running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -231,12 +231,12 @@ module custom_logic_imp_1VO6KPG
   wire S00_AXI_2_ARREADY;
   wire [2:0]S00_AXI_2_ARSIZE;
   wire S00_AXI_2_ARVALID;
-  wire [63:0]S00_AXI_2_RDATA;
+  wire [31:0]S00_AXI_2_RDATA;
   wire S00_AXI_2_RLAST;
   wire S00_AXI_2_RREADY;
   wire [1:0]S00_AXI_2_RRESP;
   wire S00_AXI_2_RVALID;
-  wire [63:0]axi_dma_0_M_AXIS_MM2S_TDATA;
+  wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
   wire axi_dma_0_M_AXIS_MM2S_TLAST;
   wire axi_dma_0_M_AXIS_MM2S_TREADY;
   wire axi_dma_0_M_AXIS_MM2S_TVALID;
@@ -668,7 +668,7 @@ module custom_logic_imp_1VO6KPG
         .m_axis_result_tlast(floating_point_0_M_AXIS_RESULT_TLAST),
         .m_axis_result_tready(floating_point_0_M_AXIS_RESULT_TREADY),
         .m_axis_result_tvalid(floating_point_0_M_AXIS_RESULT_TVALID),
-        .s_axis_a_tdata(axi_dma_0_M_AXIS_MM2S_TDATA[31:0]),
+        .s_axis_a_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
         .s_axis_a_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
         .s_axis_a_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
         .s_axis_a_tvalid(axi_dma_0_M_AXIS_MM2S_TVALID));
@@ -816,7 +816,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_FPD WREADY" *) output M_AXI_HPM0_FPD_wready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_FPD WSTRB" *) input [15:0]M_AXI_HPM0_FPD_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_FPD WVALID" *) input M_AXI_HPM0_FPD_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD ARADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_HP0_FPD, ADDR_WIDTH 49, ARUSER_WIDTH 1, AWUSER_WIDTH 1, BUSER_WIDTH 0, CLK_DOMAIN design_1_clk_250MHz, DATA_WIDTH 128, FREQ_HZ 240000000, HAS_BRESP 1, HAS_BURST 1, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 1, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 6, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 1, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) output [48:0]S_AXI_HP0_FPD_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD ARADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_HP0_FPD, ADDR_WIDTH 49, ARUSER_WIDTH 1, AWUSER_WIDTH 1, BUSER_WIDTH 0, CLK_DOMAIN design_1_clk_250MHz, DATA_WIDTH 128, FREQ_HZ 240000000, HAS_BRESP 1, HAS_BURST 1, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 1, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 6, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 1, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) output [30:0]S_AXI_HP0_FPD_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD ARBURST" *) output [1:0]S_AXI_HP0_FPD_arburst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD ARCACHE" *) output [3:0]S_AXI_HP0_FPD_arcache;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD ARID" *) output [5:0]S_AXI_HP0_FPD_arid;
@@ -829,7 +829,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD ARSIZE" *) output [2:0]S_AXI_HP0_FPD_arsize;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD ARUSER" *) output [0:0]S_AXI_HP0_FPD_aruser;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD ARVALID" *) output S_AXI_HP0_FPD_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD AWADDR" *) output [48:0]S_AXI_HP0_FPD_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD AWADDR" *) output [30:0]S_AXI_HP0_FPD_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD AWBURST" *) output [1:0]S_AXI_HP0_FPD_awburst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD AWCACHE" *) output [3:0]S_AXI_HP0_FPD_awcache;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0_FPD AWID" *) output [5:0]S_AXI_HP0_FPD_awid;
@@ -989,7 +989,7 @@ module design_1
   wire clk_150MHz_1;
   wire clk_200MHz_1;
   wire clk_250MHz_1;
-  wire [48:0]dfx_axi_shutdown_man_0_M_AXI_ARADDR;
+  wire [30:0]dfx_axi_shutdown_man_0_M_AXI_ARADDR;
   wire [1:0]dfx_axi_shutdown_man_0_M_AXI_ARBURST;
   wire [3:0]dfx_axi_shutdown_man_0_M_AXI_ARCACHE;
   wire [5:0]dfx_axi_shutdown_man_0_M_AXI_ARID;
@@ -1002,7 +1002,7 @@ module design_1
   wire [2:0]dfx_axi_shutdown_man_0_M_AXI_ARSIZE;
   wire [0:0]dfx_axi_shutdown_man_0_M_AXI_ARUSER;
   wire dfx_axi_shutdown_man_0_M_AXI_ARVALID;
-  wire [48:0]dfx_axi_shutdown_man_0_M_AXI_AWADDR;
+  wire [30:0]dfx_axi_shutdown_man_0_M_AXI_AWADDR;
   wire [1:0]dfx_axi_shutdown_man_0_M_AXI_AWBURST;
   wire [3:0]dfx_axi_shutdown_man_0_M_AXI_AWCACHE;
   wire [5:0]dfx_axi_shutdown_man_0_M_AXI_AWID;
@@ -1075,7 +1075,7 @@ module design_1
   assign M_AXI_HPM0_FPD_rresp[1:0] = M_AXI_HPM0_FPD_1_RRESP;
   assign M_AXI_HPM0_FPD_rvalid = M_AXI_HPM0_FPD_1_RVALID;
   assign M_AXI_HPM0_FPD_wready = M_AXI_HPM0_FPD_1_WREADY;
-  assign S_AXI_HP0_FPD_araddr[48:0] = dfx_axi_shutdown_man_0_M_AXI_ARADDR;
+  assign S_AXI_HP0_FPD_araddr[30:0] = dfx_axi_shutdown_man_0_M_AXI_ARADDR;
   assign S_AXI_HP0_FPD_arburst[1:0] = dfx_axi_shutdown_man_0_M_AXI_ARBURST;
   assign S_AXI_HP0_FPD_arcache[3:0] = dfx_axi_shutdown_man_0_M_AXI_ARCACHE;
   assign S_AXI_HP0_FPD_arid[5:0] = dfx_axi_shutdown_man_0_M_AXI_ARID;
@@ -1087,7 +1087,7 @@ module design_1
   assign S_AXI_HP0_FPD_arsize[2:0] = dfx_axi_shutdown_man_0_M_AXI_ARSIZE;
   assign S_AXI_HP0_FPD_aruser[0] = dfx_axi_shutdown_man_0_M_AXI_ARUSER;
   assign S_AXI_HP0_FPD_arvalid = dfx_axi_shutdown_man_0_M_AXI_ARVALID;
-  assign S_AXI_HP0_FPD_awaddr[48:0] = dfx_axi_shutdown_man_0_M_AXI_AWADDR;
+  assign S_AXI_HP0_FPD_awaddr[30:0] = dfx_axi_shutdown_man_0_M_AXI_AWADDR;
   assign S_AXI_HP0_FPD_awburst[1:0] = dfx_axi_shutdown_man_0_M_AXI_AWBURST;
   assign S_AXI_HP0_FPD_awcache[3:0] = dfx_axi_shutdown_man_0_M_AXI_AWCACHE;
   assign S_AXI_HP0_FPD_awid[5:0] = dfx_axi_shutdown_man_0_M_AXI_AWID;
@@ -1251,7 +1251,7 @@ module design_1
         .m_axi_wvalid(dfx_axi_shutdown_man_0_M_AXI_WVALID),
         .request_shutdown(xlconstant_1_dout),
         .resetn(proc_sys_reset_0_peripheral_aresetn),
-        .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_interconnect_1_M00_AXI_ARADDR}),
+        .s_axi_araddr(axi_interconnect_1_M00_AXI_ARADDR[30:0]),
         .s_axi_arburst(axi_interconnect_1_M00_AXI_ARBURST),
         .s_axi_arcache(axi_interconnect_1_M00_AXI_ARCACHE),
         .s_axi_arid({1'b0,1'b0,1'b0,1'b0,1'b0,axi_interconnect_1_M00_AXI_ARID}),
@@ -1264,7 +1264,7 @@ module design_1
         .s_axi_arsize(axi_interconnect_1_M00_AXI_ARSIZE),
         .s_axi_aruser(1'b0),
         .s_axi_arvalid(axi_interconnect_1_M00_AXI_ARVALID),
-        .s_axi_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_interconnect_1_M00_AXI_AWADDR}),
+        .s_axi_awaddr(axi_interconnect_1_M00_AXI_AWADDR[30:0]),
         .s_axi_awburst(axi_interconnect_1_M00_AXI_AWBURST),
         .s_axi_awcache(axi_interconnect_1_M00_AXI_AWCACHE),
         .s_axi_awid({1'b0,1'b0,1'b0,1'b0,1'b0,axi_interconnect_1_M00_AXI_AWID}),
@@ -2053,7 +2053,7 @@ module design_1_axi_interconnect_1_0
   output S00_AXI_arready;
   input [2:0]S00_AXI_arsize;
   input S00_AXI_arvalid;
-  output [63:0]S00_AXI_rdata;
+  output [31:0]S00_AXI_rdata;
   output S00_AXI_rlast;
   input S00_AXI_rready;
   output [1:0]S00_AXI_rresp;
@@ -2093,7 +2093,7 @@ module design_1_axi_interconnect_1_0
   wire axi_interconnect_1_to_s00_couplers_ARREADY;
   wire [2:0]axi_interconnect_1_to_s00_couplers_ARSIZE;
   wire axi_interconnect_1_to_s00_couplers_ARVALID;
-  wire [63:0]axi_interconnect_1_to_s00_couplers_RDATA;
+  wire [31:0]axi_interconnect_1_to_s00_couplers_RDATA;
   wire axi_interconnect_1_to_s00_couplers_RLAST;
   wire axi_interconnect_1_to_s00_couplers_RREADY;
   wire [1:0]axi_interconnect_1_to_s00_couplers_RRESP;
@@ -2263,7 +2263,7 @@ module design_1_axi_interconnect_1_0
   assign S00_ACLK_1 = S00_ACLK;
   assign S00_ARESETN_1 = S00_ARESETN;
   assign S00_AXI_arready = axi_interconnect_1_to_s00_couplers_ARREADY;
-  assign S00_AXI_rdata[63:0] = axi_interconnect_1_to_s00_couplers_RDATA;
+  assign S00_AXI_rdata[31:0] = axi_interconnect_1_to_s00_couplers_RDATA;
   assign S00_AXI_rlast = axi_interconnect_1_to_s00_couplers_RLAST;
   assign S00_AXI_rresp[1:0] = axi_interconnect_1_to_s00_couplers_RRESP;
   assign S00_AXI_rvalid = axi_interconnect_1_to_s00_couplers_RVALID;
@@ -3691,7 +3691,7 @@ module s00_couplers_imp_14KJ623
   output S_AXI_arready;
   input [2:0]S_AXI_arsize;
   input S_AXI_arvalid;
-  output [63:0]S_AXI_rdata;
+  output [31:0]S_AXI_rdata;
   output S_AXI_rlast;
   input S_AXI_rready;
   output [1:0]S_AXI_rresp;
@@ -3722,7 +3722,7 @@ module s00_couplers_imp_14KJ623
   wire s00_couplers_to_auto_us_ARREADY;
   wire [2:0]s00_couplers_to_auto_us_ARSIZE;
   wire s00_couplers_to_auto_us_ARVALID;
-  wire [63:0]s00_couplers_to_auto_us_RDATA;
+  wire [31:0]s00_couplers_to_auto_us_RDATA;
   wire s00_couplers_to_auto_us_RLAST;
   wire s00_couplers_to_auto_us_RREADY;
   wire [1:0]s00_couplers_to_auto_us_RRESP;
@@ -3741,7 +3741,7 @@ module s00_couplers_imp_14KJ623
   assign S_ACLK_1 = S_ACLK;
   assign S_ARESETN_1 = S_ARESETN;
   assign S_AXI_arready = s00_couplers_to_auto_us_ARREADY;
-  assign S_AXI_rdata[63:0] = s00_couplers_to_auto_us_RDATA;
+  assign S_AXI_rdata[31:0] = s00_couplers_to_auto_us_RDATA;
   assign S_AXI_rlast = s00_couplers_to_auto_us_RLAST;
   assign S_AXI_rresp[1:0] = s00_couplers_to_auto_us_RRESP;
   assign S_AXI_rvalid = s00_couplers_to_auto_us_RVALID;

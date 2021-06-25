@@ -11,95 +11,95 @@
 `timescale 1 ps / 1 ps
 
 module rm_wrapper
-   (M_AXI_HPM0_FPD_araddr,
-    M_AXI_HPM0_FPD_arburst,
-    M_AXI_HPM0_FPD_arcache,
-    M_AXI_HPM0_FPD_arid,
-    M_AXI_HPM0_FPD_arlen,
-    M_AXI_HPM0_FPD_arlock,
-    M_AXI_HPM0_FPD_arprot,
-    M_AXI_HPM0_FPD_arqos,
-    M_AXI_HPM0_FPD_arready,
-    M_AXI_HPM0_FPD_arregion,
-    M_AXI_HPM0_FPD_arsize,
-    M_AXI_HPM0_FPD_aruser,
-    M_AXI_HPM0_FPD_arvalid,
-    M_AXI_HPM0_FPD_awaddr,
-    M_AXI_HPM0_FPD_awburst,
-    M_AXI_HPM0_FPD_awcache,
-    M_AXI_HPM0_FPD_awid,
-    M_AXI_HPM0_FPD_awlen,
-    M_AXI_HPM0_FPD_awlock,
-    M_AXI_HPM0_FPD_awprot,
-    M_AXI_HPM0_FPD_awqos,
-    M_AXI_HPM0_FPD_awready,
-    M_AXI_HPM0_FPD_awregion,
-    M_AXI_HPM0_FPD_awsize,
-    M_AXI_HPM0_FPD_awuser,
-    M_AXI_HPM0_FPD_awvalid,
-    M_AXI_HPM0_FPD_bid,
-    M_AXI_HPM0_FPD_bready,
-    M_AXI_HPM0_FPD_bresp,
-    M_AXI_HPM0_FPD_bvalid,
-    M_AXI_HPM0_FPD_rdata,
-    M_AXI_HPM0_FPD_rid,
-    M_AXI_HPM0_FPD_rlast,
-    M_AXI_HPM0_FPD_rready,
-    M_AXI_HPM0_FPD_rresp,
-    M_AXI_HPM0_FPD_rvalid,
-    M_AXI_HPM0_FPD_wdata,
-    M_AXI_HPM0_FPD_wlast,
-    M_AXI_HPM0_FPD_wready,
-    M_AXI_HPM0_FPD_wstrb,
-    M_AXI_HPM0_FPD_wvalid,
-    S_AXI_HP0_FPD_araddr,
-    S_AXI_HP0_FPD_arburst,
-    S_AXI_HP0_FPD_arcache,
-    S_AXI_HP0_FPD_arid,
-    S_AXI_HP0_FPD_arlen,
-    S_AXI_HP0_FPD_arlock,
-    S_AXI_HP0_FPD_arprot,
-    S_AXI_HP0_FPD_arqos,
-    S_AXI_HP0_FPD_arready,
-    S_AXI_HP0_FPD_arregion,
-    S_AXI_HP0_FPD_arsize,
-    S_AXI_HP0_FPD_aruser,
-    S_AXI_HP0_FPD_arvalid,
-    S_AXI_HP0_FPD_awaddr,
-    S_AXI_HP0_FPD_awburst,
-    S_AXI_HP0_FPD_awcache,
-    S_AXI_HP0_FPD_awid,
-    S_AXI_HP0_FPD_awlen,
-    S_AXI_HP0_FPD_awlock,
-    S_AXI_HP0_FPD_awprot,
-    S_AXI_HP0_FPD_awqos,
-    S_AXI_HP0_FPD_awready,
-    S_AXI_HP0_FPD_awregion,
-    S_AXI_HP0_FPD_awsize,
-    S_AXI_HP0_FPD_awuser,
-    S_AXI_HP0_FPD_awvalid,
-    S_AXI_HP0_FPD_bid,
-    S_AXI_HP0_FPD_bready,
-    S_AXI_HP0_FPD_bresp,
-    S_AXI_HP0_FPD_bvalid,
-    S_AXI_HP0_FPD_rdata,
-    S_AXI_HP0_FPD_rid,
-    S_AXI_HP0_FPD_rlast,
-    S_AXI_HP0_FPD_rready,
-    S_AXI_HP0_FPD_rresp,
-    S_AXI_HP0_FPD_rvalid,
-    S_AXI_HP0_FPD_wdata,
-    S_AXI_HP0_FPD_wlast,
-    S_AXI_HP0_FPD_wready,
-    S_AXI_HP0_FPD_wstrb,
-    S_AXI_HP0_FPD_wvalid,
-    clk_100MHz,
-    clk_150MHz,
-    clk_200MHz,
-    clk_240MHz,
-    intr,
-    rstn
-    );
+(M_AXI_HPM0_FPD_araddr,
+M_AXI_HPM0_FPD_arburst,
+M_AXI_HPM0_FPD_arcache,
+M_AXI_HPM0_FPD_arid,
+M_AXI_HPM0_FPD_arlen,
+M_AXI_HPM0_FPD_arlock,
+M_AXI_HPM0_FPD_arprot,
+M_AXI_HPM0_FPD_arqos,
+M_AXI_HPM0_FPD_arready,
+M_AXI_HPM0_FPD_arregion,
+M_AXI_HPM0_FPD_arsize,
+M_AXI_HPM0_FPD_aruser,
+M_AXI_HPM0_FPD_arvalid,
+M_AXI_HPM0_FPD_awaddr,
+M_AXI_HPM0_FPD_awburst,
+M_AXI_HPM0_FPD_awcache,
+M_AXI_HPM0_FPD_awid,
+M_AXI_HPM0_FPD_awlen,
+M_AXI_HPM0_FPD_awlock,
+M_AXI_HPM0_FPD_awprot,
+M_AXI_HPM0_FPD_awqos,
+M_AXI_HPM0_FPD_awready,
+M_AXI_HPM0_FPD_awregion,
+M_AXI_HPM0_FPD_awsize,
+M_AXI_HPM0_FPD_awuser,
+M_AXI_HPM0_FPD_awvalid,
+M_AXI_HPM0_FPD_bid,
+M_AXI_HPM0_FPD_bready,
+M_AXI_HPM0_FPD_bresp,
+M_AXI_HPM0_FPD_bvalid,
+M_AXI_HPM0_FPD_rdata,
+M_AXI_HPM0_FPD_rid,
+M_AXI_HPM0_FPD_rlast,
+M_AXI_HPM0_FPD_rready,
+M_AXI_HPM0_FPD_rresp,
+M_AXI_HPM0_FPD_rvalid,
+M_AXI_HPM0_FPD_wdata,
+M_AXI_HPM0_FPD_wlast,
+M_AXI_HPM0_FPD_wready,
+M_AXI_HPM0_FPD_wstrb,
+M_AXI_HPM0_FPD_wvalid,
+S_AXI_HP0_FPD_araddr,
+S_AXI_HP0_FPD_arburst,
+S_AXI_HP0_FPD_arcache,
+S_AXI_HP0_FPD_arid,
+S_AXI_HP0_FPD_arlen,
+S_AXI_HP0_FPD_arlock,
+S_AXI_HP0_FPD_arprot,
+S_AXI_HP0_FPD_arqos,
+S_AXI_HP0_FPD_arready,
+S_AXI_HP0_FPD_arregion,
+S_AXI_HP0_FPD_arsize,
+S_AXI_HP0_FPD_aruser,
+S_AXI_HP0_FPD_arvalid,
+S_AXI_HP0_FPD_awaddr,
+S_AXI_HP0_FPD_awburst,
+S_AXI_HP0_FPD_awcache,
+S_AXI_HP0_FPD_awid,
+S_AXI_HP0_FPD_awlen,
+S_AXI_HP0_FPD_awlock,
+S_AXI_HP0_FPD_awprot,
+S_AXI_HP0_FPD_awqos,
+S_AXI_HP0_FPD_awready,
+S_AXI_HP0_FPD_awregion,
+S_AXI_HP0_FPD_awsize,
+S_AXI_HP0_FPD_awuser,
+S_AXI_HP0_FPD_awvalid,
+S_AXI_HP0_FPD_bid,
+S_AXI_HP0_FPD_bready,
+S_AXI_HP0_FPD_bresp,
+S_AXI_HP0_FPD_bvalid,
+S_AXI_HP0_FPD_rdata,
+S_AXI_HP0_FPD_rid,
+S_AXI_HP0_FPD_rlast,
+S_AXI_HP0_FPD_rready,
+S_AXI_HP0_FPD_rresp,
+S_AXI_HP0_FPD_rvalid,
+S_AXI_HP0_FPD_wdata,
+S_AXI_HP0_FPD_wlast,
+S_AXI_HP0_FPD_wready,
+S_AXI_HP0_FPD_wstrb,
+S_AXI_HP0_FPD_wvalid,
+clk_100MHz,
+clk_150MHz,
+clk_200MHz,
+clk_240MHz,
+intr,
+rstn
+);
 input  [ 39:0] M_AXI_HPM0_FPD_araddr  ;
 input  [  1:0] M_AXI_HPM0_FPD_arburst ;
 input  [  3:0] M_AXI_HPM0_FPD_arcache ;
@@ -141,47 +141,47 @@ input          M_AXI_HPM0_FPD_wlast   ;
 output         M_AXI_HPM0_FPD_wready  ;
 input  [ 15:0] M_AXI_HPM0_FPD_wstrb   ;
 input          M_AXI_HPM0_FPD_wvalid  ;
-output [ 48:0] S_AXI_HP0_FPD_araddr   ;
+output [ 30:0] S_AXI_HP0_FPD_araddr   ;
 output [  1:0] S_AXI_HP0_FPD_arburst  ;
 output [  3:0] S_AXI_HP0_FPD_arcache  ;
 output [  5:0] S_AXI_HP0_FPD_arid     ;
 output [  7:0] S_AXI_HP0_FPD_arlen    ;
-output         S_AXI_HP0_FPD_arlock   ;
+output [  0:0] S_AXI_HP0_FPD_arlock   ;
 output [  2:0] S_AXI_HP0_FPD_arprot   ;
 output [  3:0] S_AXI_HP0_FPD_arqos    ;
 input          S_AXI_HP0_FPD_arready  ;
 output [  3:0] S_AXI_HP0_FPD_arregion ;
 output [  2:0] S_AXI_HP0_FPD_arsize   ;
 output [  0:0] S_AXI_HP0_FPD_aruser   ;
-output         S_AXI_HP0_FPD_arvalid  ;
-output [ 48:0] S_AXI_HP0_FPD_awaddr   ;
+output [  0:0] S_AXI_HP0_FPD_arvalid  ;
+output [ 30:0] S_AXI_HP0_FPD_awaddr   ;
 output [  1:0] S_AXI_HP0_FPD_awburst  ;
 output [  3:0] S_AXI_HP0_FPD_awcache  ;
 output [  5:0] S_AXI_HP0_FPD_awid     ;
 output [  7:0] S_AXI_HP0_FPD_awlen    ;
-output         S_AXI_HP0_FPD_awlock   ;
+output [  0:0] S_AXI_HP0_FPD_awlock   ;
 output [  2:0] S_AXI_HP0_FPD_awprot   ;
 output [  3:0] S_AXI_HP0_FPD_awqos    ;
 input          S_AXI_HP0_FPD_awready  ;
 output [  3:0] S_AXI_HP0_FPD_awregion ;
 output [  2:0] S_AXI_HP0_FPD_awsize   ;
 output [  0:0] S_AXI_HP0_FPD_awuser   ;
-output         S_AXI_HP0_FPD_awvalid  ;
+output [  0:0] S_AXI_HP0_FPD_awvalid  ;
 input  [  5:0] S_AXI_HP0_FPD_bid      ;
-output         S_AXI_HP0_FPD_bready   ;
+output [  0:0] S_AXI_HP0_FPD_bready   ;
 input  [  1:0] S_AXI_HP0_FPD_bresp    ;
 input          S_AXI_HP0_FPD_bvalid   ;
 input  [127:0] S_AXI_HP0_FPD_rdata    ;
 input  [  5:0] S_AXI_HP0_FPD_rid      ;
 input          S_AXI_HP0_FPD_rlast    ;
-output         S_AXI_HP0_FPD_rready   ;
+output [  0:0] S_AXI_HP0_FPD_rready   ;
 input  [  1:0] S_AXI_HP0_FPD_rresp    ;
 input          S_AXI_HP0_FPD_rvalid   ;
 output [127:0] S_AXI_HP0_FPD_wdata    ;
-output         S_AXI_HP0_FPD_wlast    ;
+output [  0:0] S_AXI_HP0_FPD_wlast    ;
 input          S_AXI_HP0_FPD_wready   ;
 output [ 15:0] S_AXI_HP0_FPD_wstrb    ;
-output         S_AXI_HP0_FPD_wvalid   ;
+output [  0:0] S_AXI_HP0_FPD_wvalid   ;
 input          clk_100MHz             ;
 input          clk_150MHz             ;
 input          clk_200MHz             ;

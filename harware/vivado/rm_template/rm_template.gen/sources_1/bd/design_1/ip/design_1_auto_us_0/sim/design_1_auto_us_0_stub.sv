@@ -80,7 +80,7 @@ module design_1_auto_us_0 (
   input bit [3 : 0] s_axi_arqos,
   input bit_as_bool s_axi_arvalid,
   output bit_as_bool s_axi_arready,
-  output bit [63 : 0] s_axi_rdata,
+  output bit [31 : 0] s_axi_rdata,
   output bit [1 : 0] s_axi_rresp,
   output bit_as_bool s_axi_rlast,
   output bit_as_bool s_axi_rvalid,
@@ -123,7 +123,7 @@ module design_1_auto_us_0 (s_axi_aclk,s_axi_aresetn,s_axi_araddr,s_axi_arlen,s_a
   input bit [3 : 0] s_axi_arqos;
   input bit s_axi_arvalid;
   output wire s_axi_arready;
-  output wire [63 : 0] s_axi_rdata;
+  output wire [31 : 0] s_axi_rdata;
   output wire [1 : 0] s_axi_rresp;
   output wire s_axi_rlast;
   output wire s_axi_rvalid;
@@ -163,7 +163,7 @@ module design_1_auto_us_0 (s_axi_aclk,s_axi_aresetn,s_axi_araddr,s_axi_arlen,s_a
   input bit [3 : 0] s_axi_arqos;
   input bit s_axi_arvalid;
   output wire s_axi_arready;
-  output wire [63 : 0] s_axi_rdata;
+  output wire [31 : 0] s_axi_rdata;
   output wire [1 : 0] s_axi_rresp;
   output wire s_axi_rlast;
   output wire s_axi_rvalid;

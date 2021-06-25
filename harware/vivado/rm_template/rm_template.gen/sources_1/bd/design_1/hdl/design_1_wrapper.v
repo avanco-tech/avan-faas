@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Tue Jun 22 21:10:13 2021
+//Date        : Fri Jun 25 01:05:28 2021
 //Host        : avanpc running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -139,7 +139,7 @@ module design_1_wrapper
   output M_AXI_HPM0_FPD_wready;
   input [15:0]M_AXI_HPM0_FPD_wstrb;
   input M_AXI_HPM0_FPD_wvalid;
-  output [48:0]S_AXI_HP0_FPD_araddr;
+  output [30:0]S_AXI_HP0_FPD_araddr;
   output [1:0]S_AXI_HP0_FPD_arburst;
   output [3:0]S_AXI_HP0_FPD_arcache;
   output [5:0]S_AXI_HP0_FPD_arid;
@@ -152,7 +152,7 @@ module design_1_wrapper
   output [2:0]S_AXI_HP0_FPD_arsize;
   output [0:0]S_AXI_HP0_FPD_aruser;
   output S_AXI_HP0_FPD_arvalid;
-  output [48:0]S_AXI_HP0_FPD_awaddr;
+  output [30:0]S_AXI_HP0_FPD_awaddr;
   output [1:0]S_AXI_HP0_FPD_awburst;
   output [3:0]S_AXI_HP0_FPD_awcache;
   output [5:0]S_AXI_HP0_FPD_awid;
@@ -228,7 +228,7 @@ module design_1_wrapper
   wire M_AXI_HPM0_FPD_wready;
   wire [15:0]M_AXI_HPM0_FPD_wstrb;
   wire M_AXI_HPM0_FPD_wvalid;
-  wire [48:0]S_AXI_HP0_FPD_araddr;
+  wire [30:0]S_AXI_HP0_FPD_araddr;
   wire [1:0]S_AXI_HP0_FPD_arburst;
   wire [3:0]S_AXI_HP0_FPD_arcache;
   wire [5:0]S_AXI_HP0_FPD_arid;
@@ -241,7 +241,7 @@ module design_1_wrapper
   wire [2:0]S_AXI_HP0_FPD_arsize;
   wire [0:0]S_AXI_HP0_FPD_aruser;
   wire S_AXI_HP0_FPD_arvalid;
-  wire [48:0]S_AXI_HP0_FPD_awaddr;
+  wire [30:0]S_AXI_HP0_FPD_awaddr;
   wire [1:0]S_AXI_HP0_FPD_awburst;
   wire [3:0]S_AXI_HP0_FPD_awcache;
   wire [5:0]S_AXI_HP0_FPD_awid;

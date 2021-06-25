@@ -85,11 +85,6 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zcu104:part0:1.1 [current_project]
-set_property ip_repo_paths {
-  /home/avanpc/avanco/vivado_projects/dfx_files/outputs/ip/simple-axi-lite-counter
-  /home/avanpc/avanco/vivado_projects/dfx_files/outputs/ip/simple-stream-ip
-} [current_project]
-update_ip_catalog
 set_property ip_output_repo /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

@@ -69,7 +69,7 @@ ENTITY design_1_dfx_axi_shutdown_man_0_0 IS
     rd_in_shutdown : OUT STD_LOGIC;
     request_shutdown : IN STD_LOGIC;
     s_axi_awid : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-    s_axi_awaddr : IN STD_LOGIC_VECTOR(48 DOWNTO 0);
+    s_axi_awaddr : IN STD_LOGIC_VECTOR(30 DOWNTO 0);
     s_axi_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -82,7 +82,7 @@ ENTITY design_1_dfx_axi_shutdown_man_0_0 IS
     s_axi_awregion : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi_awuser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     m_axi_awid : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-    m_axi_awaddr : OUT STD_LOGIC_VECTOR(48 DOWNTO 0);
+    m_axi_awaddr : OUT STD_LOGIC_VECTOR(30 DOWNTO 0);
     m_axi_awlen : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     m_axi_awsize : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
     m_axi_awburst : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -113,7 +113,7 @@ ENTITY design_1_dfx_axi_shutdown_man_0_0 IS
     m_axi_bvalid : IN STD_LOGIC;
     m_axi_bready : OUT STD_LOGIC;
     s_axi_arid : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-    s_axi_araddr : IN STD_LOGIC_VECTOR(48 DOWNTO 0);
+    s_axi_araddr : IN STD_LOGIC_VECTOR(30 DOWNTO 0);
     s_axi_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_arburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -126,7 +126,7 @@ ENTITY design_1_dfx_axi_shutdown_man_0_0 IS
     s_axi_arvalid : IN STD_LOGIC;
     s_axi_arready : OUT STD_LOGIC;
     m_axi_arid : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-    m_axi_araddr : OUT STD_LOGIC_VECTOR(48 DOWNTO 0);
+    m_axi_araddr : OUT STD_LOGIC_VECTOR(30 DOWNTO 0);
     m_axi_arlen : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     m_axi_arsize : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
     m_axi_arburst : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -204,7 +204,7 @@ ARCHITECTURE design_1_dfx_axi_shutdown_man_0_0_arch OF design_1_dfx_axi_shutdown
       s_axi_ctrl_rvalid : OUT STD_LOGIC;
       s_axi_ctrl_rready : IN STD_LOGIC;
       s_axi_awid : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-      s_axi_awaddr : IN STD_LOGIC_VECTOR(48 DOWNTO 0);
+      s_axi_awaddr : IN STD_LOGIC_VECTOR(30 DOWNTO 0);
       s_axi_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axi_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -217,7 +217,7 @@ ARCHITECTURE design_1_dfx_axi_shutdown_man_0_0_arch OF design_1_dfx_axi_shutdown
       s_axi_awregion : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       s_axi_awuser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axi_awid : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-      m_axi_awaddr : OUT STD_LOGIC_VECTOR(48 DOWNTO 0);
+      m_axi_awaddr : OUT STD_LOGIC_VECTOR(30 DOWNTO 0);
       m_axi_awlen : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       m_axi_awsize : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
       m_axi_awburst : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -252,7 +252,7 @@ ARCHITECTURE design_1_dfx_axi_shutdown_man_0_0_arch OF design_1_dfx_axi_shutdown
       m_axi_bready : OUT STD_LOGIC;
       m_axi_buser : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axi_arid : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-      s_axi_araddr : IN STD_LOGIC_VECTOR(48 DOWNTO 0);
+      s_axi_araddr : IN STD_LOGIC_VECTOR(30 DOWNTO 0);
       s_axi_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axi_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s_axi_arburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -265,7 +265,7 @@ ARCHITECTURE design_1_dfx_axi_shutdown_man_0_0_arch OF design_1_dfx_axi_shutdown
       s_axi_arvalid : IN STD_LOGIC;
       s_axi_arready : OUT STD_LOGIC;
       m_axi_arid : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-      m_axi_araddr : OUT STD_LOGIC_VECTOR(48 DOWNTO 0);
+      m_axi_araddr : OUT STD_LOGIC_VECTOR(30 DOWNTO 0);
       m_axi_arlen : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       m_axi_arsize : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
       m_axi_arburst : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -298,7 +298,7 @@ ARCHITECTURE design_1_dfx_axi_shutdown_man_0_0_arch OF design_1_dfx_axi_shutdown
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_dfx_axi_shutdown_man_0_0_arch : ARCHITECTURE IS "design_1_dfx_axi_shutdown_man_0_0,dfx_axi_shutdown_manager_v1_0_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_dfx_axi_shutdown_man_0_0_arch: ARCHITECTURE IS "design_1_dfx_axi_shutdown_man_0_0,dfx_axi_shutdown_manager_v1_0_0,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=dfx_axi_shutdown_manager,x_ipVersion=1.0,x_ipCoreRevision=0,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_RESET_ACTIVE_LEVEL=0,C_RP_IS_MASTER=1,C_CTRL_INTERFACE_TYPE=0,C_CTRL_ADDR_WIDTH=32,C_CTRL_DATA_WIDTH=32,C_DP_PROTOCOL=AXI4MM,C_DP_AXI_RESP=0,C_DP_AXI_ADDR_WIDTH=49,C_DP_AXI_DATA_WIDTH=128,C_DP_AXI_AWUSER_WIDTH=1,C_DP_AXI_WUSER_WIDTH=1,C_" & 
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_dfx_axi_shutdown_man_0_0_arch: ARCHITECTURE IS "design_1_dfx_axi_shutdown_man_0_0,dfx_axi_shutdown_manager_v1_0_0,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=dfx_axi_shutdown_manager,x_ipVersion=1.0,x_ipCoreRevision=0,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_RESET_ACTIVE_LEVEL=0,C_RP_IS_MASTER=1,C_CTRL_INTERFACE_TYPE=0,C_CTRL_ADDR_WIDTH=32,C_CTRL_DATA_WIDTH=32,C_DP_PROTOCOL=AXI4MM,C_DP_AXI_RESP=0,C_DP_AXI_ADDR_WIDTH=31,C_DP_AXI_DATA_WIDTH=128,C_DP_AXI_AWUSER_WIDTH=1,C_DP_AXI_WUSER_WIDTH=1,C_" & 
 "DP_AXI_BUSER_WIDTH=1,C_DP_AXI_ARUSER_WIDTH=1,C_DP_AXI_RUSER_WIDTH=1,C_DP_AXI_ID_WIDTH=6}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
@@ -370,7 +370,7 @@ ARCHITECTURE design_1_dfx_axi_shutdown_man_0_0_arch OF design_1_dfx_axi_shutdown
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_awsize: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI AWSIZE";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_awlen: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI AWLEN";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI AWADDR";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axi_awid: SIGNAL IS "XIL_INTERFACENAME M_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 240000000, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN design_1_clk_250MHz, NUM_READ_THREADS 1, NUM_WRITE_THREAD" & 
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axi_awid: SIGNAL IS "XIL_INTERFACENAME M_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 240000000, ID_WIDTH 6, ADDR_WIDTH 31, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN design_1_clk_250MHz, NUM_READ_THREADS 1, NUM_WRITE_THREAD" & 
 "S 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_awid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI AWID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awuser: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWUSER";
@@ -385,7 +385,7 @@ ARCHITECTURE design_1_dfx_axi_shutdown_man_0_0_arch OF design_1_dfx_axi_shutdown
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awsize: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWSIZE";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awlen: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWLEN";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_awid: SIGNAL IS "XIL_INTERFACENAME S_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 240000000, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 8, PHASE 0.000, CLK_DOMAIN design_1_clk_250MHz, NUM_READ_THREADS 1, NUM_WRITE_THREADS " & 
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_awid: SIGNAL IS "XIL_INTERFACENAME S_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 240000000, ID_WIDTH 6, ADDR_WIDTH 31, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 4, PHASE 0.000, CLK_DOMAIN design_1_clk_250MHz, NUM_READ_THREADS 1, NUM_WRITE_THREADS " & 
 "1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWID";
   ATTRIBUTE X_INTERFACE_PARAMETER OF rd_irq: SIGNAL IS "XIL_INTERFACENAME rd_irq_intf, SENSITIVITY LEVEL_HIGH, PortWidth 1";
@@ -409,7 +409,7 @@ BEGIN
       C_CTRL_DATA_WIDTH => 32,
       C_DP_PROTOCOL => "AXI4MM",
       C_DP_AXI_RESP => 0,
-      C_DP_AXI_ADDR_WIDTH => 49,
+      C_DP_AXI_ADDR_WIDTH => 31,
       C_DP_AXI_DATA_WIDTH => 128,
       C_DP_AXI_AWUSER_WIDTH => 1,
       C_DP_AXI_WUSER_WIDTH => 1,

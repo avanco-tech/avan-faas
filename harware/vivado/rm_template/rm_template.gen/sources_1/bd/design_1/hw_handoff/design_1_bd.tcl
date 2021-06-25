@@ -175,9 +175,9 @@ proc create_hier_cell_custom_logic { parentCell nameHier } {
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
   set_property -dict [ list \
    CONFIG.c_include_sg {0} \
-   CONFIG.c_m_axi_mm2s_data_width {64} \
-   CONFIG.c_m_axis_mm2s_tdata_width {64} \
-   CONFIG.c_mm2s_burst_size {8} \
+   CONFIG.c_m_axi_mm2s_data_width {32} \
+   CONFIG.c_m_axis_mm2s_tdata_width {32} \
+   CONFIG.c_mm2s_burst_size {16} \
    CONFIG.c_sg_include_stscntrl_strm {0} \
  ] $axi_dma_0
 
@@ -325,7 +325,7 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.PROTOCOL {AXI4} \
    ] $S_AXI_HP0_FPD
-  set_property APERTURES {{0x0 2G}} [get_bd_intf_ports S_AXI_HP0_FPD]
+  set_property APERTURES {{0x7000_0000 256M}} [get_bd_intf_ports S_AXI_HP0_FPD]
 
 
   # Create ports
@@ -350,7 +350,7 @@ proc create_root_design { parentCell } {
   set dfx_axi_shutdown_man_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dfx_axi_shutdown_manager:1.0 dfx_axi_shutdown_man_0 ]
   set_property -dict [ list \
    CONFIG.CTRL_INTERFACE_TYPE {0} \
-   CONFIG.DP_AXI_ADDR_WIDTH {49} \
+   CONFIG.DP_AXI_ADDR_WIDTH {31} \
    CONFIG.DP_AXI_ARUSER_WIDTH {1} \
    CONFIG.DP_AXI_AWUSER_WIDTH {1} \
    CONFIG.DP_AXI_BUSER_WIDTH {0} \
@@ -391,10 +391,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net xlconstant_1_dout [get_bd_pins dfx_axi_shutdown_man_0/request_shutdown] [get_bd_pins dfx_axi_shutdown_man_1/request_shutdown] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
-  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces custom_logic/axi_dma_0/Data_MM2S] [get_bd_addr_segs S_AXI_HP0_FPD/Reg] -force
-  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces custom_logic/axi_dma_0/Data_S2MM] [get_bd_addr_segs S_AXI_HP0_FPD/Reg] -force
-  assign_bd_address -offset 0xA0010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces M_AXI_HPM0_FPD] [get_bd_addr_segs custom_logic/axi_dma_0/S_AXI_LITE/Reg] -force
-  assign_bd_address -offset 0xA0000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces M_AXI_HPM0_FPD] [get_bd_addr_segs custom_logic/axi_intc_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x70000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces custom_logic/axi_dma_0/Data_MM2S] [get_bd_addr_segs S_AXI_HP0_FPD/Reg] -force
+  assign_bd_address -offset 0x70000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces custom_logic/axi_dma_0/Data_S2MM] [get_bd_addr_segs S_AXI_HP0_FPD/Reg] -force
+  assign_bd_address -offset 0xA0000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces M_AXI_HPM0_FPD] [get_bd_addr_segs custom_logic/axi_dma_0/S_AXI_LITE/Reg] -force
+  assign_bd_address -offset 0xA0010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces M_AXI_HPM0_FPD] [get_bd_addr_segs custom_logic/axi_intc_0/S_AXI/Reg] -force
 
 
   # Restore current instance
