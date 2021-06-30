@@ -1,0 +1,36 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.654286",
+   "Default View_TopLeft":"-277,-79",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port M_AXI_HPM0_FPD -pg 1 -lvl 0 -x -100 -y 100 -defaultsOSRD
+preplace port S_AXI_HP0_FPD -pg 1 -lvl 2 -x 1220 -y 210 -defaultsOSRD
+preplace port clk_main -pg 1 -lvl 0 -x -100 -y 120 -defaultsOSRD
+preplace port clk_extra_0 -pg 1 -lvl 0 -x -100 -y 300 -defaultsOSRD
+preplace port clk_extra_1 -pg 1 -lvl 0 -x -100 -y 320 -defaultsOSRD
+preplace port clk_extra_2 -pg 1 -lvl 0 -x -100 -y 340 -defaultsOSRD
+preplace portBus intr -pg 1 -lvl 2 -x 1220 -y 150 -defaultsOSRD
+preplace portBus rstn -pg 1 -lvl 0 -x -100 -y 140 -defaultsOSRD
+preplace inst custom_logic -pg 1 -lvl 1 -x 690 -y 30 -defaultsOSRD
+preplace inst dfx_axi_shutdown_man_0 -pg 1 -lvl 1 -x 690 -y 650 -defaultsOSRD
+preplace inst dfx_axi_shutdown_man_1 -pg 1 -lvl 1 -x 690 -y 410 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 690 -y 240 -defaultsOSRD
+preplace netloc ARESETN_1 1 0 1 -50J 20n
+preplace netloc axi_intc_0_irq 1 1 1 900J 30n
+preplace netloc clk_100MHz 1 0 1 -60J 0n
+preplace netloc clk_extra_1_1 1 0 1 -30 80n
+preplace netloc clk_extra_2_1 1 0 1 -40 40n
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 2 -10 150 880
+preplace netloc xlconstant_1_dout 1 0 2 0 780 860
+preplace netloc clk_extra_0_1 1 0 1 -80 60n
+preplace netloc S00_AXI_1 1 0 2 -10 130 870
+preplace netloc M_AXI_HPM0_FPD_1 1 0 1 -70J 100n
+preplace netloc axi_interconnect_1_M00_AXI 1 0 2 -20 140 890
+preplace netloc dfx_axi_shutdown_man_0_M_AXI 1 1 1 890 210n
+levelinfo -pg 1 -100 690 1220
+pagesize -pg 1 -db -bbox -sgen -280 -80 1380 810
+"
+}
+0

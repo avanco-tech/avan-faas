@@ -1,0 +1,891 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:47 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 31655
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Jun 28 17:38:47 IRDT 2021
+Time zone: 	Iran Standard Time (Asia/Tehran)
+
+OS: Ubuntu
+OS Version: 5.4.0-73-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 0.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/home/avanpc/tools/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2
+Java executable location: 	/home/avanpc/tools/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	avanpc
+User home directory: /home/avanpc
+User working directory: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/avanpc/tools/Xilinx/Vivado
+HDI_APPROOT: /home/avanpc/tools/Xilinx/Vivado/2020.2
+RDI_DATADIR: /home/avanpc/tools/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: /home/avanpc/tools/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: /home/avanpc/.Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: /home/avanpc/.Xilinx/Vivado/2020.2/
+Vivado layouts directory: /home/avanpc/.Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	/home/avanpc/tools/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/vivado.log
+Vivado journal file location: 	/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-31655-avanpc
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/avanpc/tools/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: /home/avanpc/tools/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: /home/avanpc/tools/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: /home/avanpc/tools/Xilinx/Vivado/2020.2
+XILINX_SDK: /home/avanpc/tools/Xilinx/Vitis/2020.2
+XILINX_VITIS: /home/avanpc/tools/Xilinx/Vitis/2020.2
+XILINX_VIVADO: /home/avanpc/tools/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: /home/avanpc/tools/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,551 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 87 MB (+88226kb) [00:00:05]
+// [Engine Memory]: 1,537 MB (+1460603kb) [00:00:05]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: rm_template.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project rm_template.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,561 MB. GUI used memory: 55 MB. Current time: 6/28/21, 5:38:48 PM IRDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 107 MB (+16537kb) [00:00:12]
+// [Engine Memory]: 1,673 MB (+61734kb) [00:00:13]
+// [GUI Memory]: 112 MB (+483kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  2100 ms.
+// Tcl Message: open_project rm_template.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/avanpc/tools/Xilinx/Vivado/2020.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 7468.520 ; gain = 95.352 ; free physical = 693 ; free virtual = 31247 
+// Project name: rm_template; location: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila; part: xczu7ev-ffvc1156-2-e
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 120 MB (+2412kb) [00:00:18]
+// [GUI Memory]: 129 MB (+2433kb) [00:00:20]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cr):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/design_1/design_1.bd} 
+// Tcl Message: Reading block design file </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/design_1/design_1.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 1,768 MB (+11739kb) [00:00:24]
+// WARNING: HEventQueue.dispatchEvent() is taking  1174 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,813 MB. GUI used memory: 87 MB. Current time: 6/28/21, 5:39:03 PM IRDT
+// [Engine Memory]: 1,865 MB (+8776kb) [00:00:25]
+// [GUI Memory]: 141 MB (+5959kb) [00:00:25]
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 8893.363 ; gain = 1138.707 ; free physical = 532 ; free virtual = 31094 
+// [Engine Memory]: 1,989 MB (+32135kb) [00:00:25]
+// 'bF' command handler elapsed time: 5 seconds
+dismissDialog("Open Block Design"); // bz
+// [GUI Memory]: 153 MB (+4894kb) [00:00:26]
+// Run Command: RDIResourceCommand.RDICommands_COPY
+// Run Command: RDIResourceCommand.RDICommands_COPY
+// Run Command: RDIResourceCommand.RDICommands_COPY
+// Elapsed time: 32 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // u
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+// bq (cr): Create Block Design: addNotify
+setText(PAResourceAtoD.CreateNewDiagramDialog_DESIGN_NAME, "rm_design", true); // aa
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Create Block Design"); // bq
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// Tcl Message: create_bd_design "rm_design" 
+// Tcl Message: Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>  
+// bz (cr):  Create Block Design : addNotify
+dismissDialog("Create Block Design"); // bz
+// [Engine Memory]: 2,093 MB (+5289kb) [00:01:03]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,093 MB. GUI used memory: 96 MB. Current time: 6/28/21, 5:39:43 PM IRDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// Tcl Message: current_bd_design design_1 
+// Tcl Message: set tmpCopyObjs [concat  [get_bd_cells {custom_logic dfx_axi_shutdown_man_1 xlconstant_1 dfx_axi_shutdown_man_0}] [get_bd_intf_ports {M_AXI_HPM0_FPD S_AXI_HP0_FPD}] [get_bd_ports {clk_240MHz clk_100MHz clk_150MHz clk_200MHz rstn intr}] [get_bd_intf_nets {dfx_axi_shutdown_man_0_M_AXI axi_interconnect_1_M00_AXI S00_AXI_1 M_AXI_HPM0_FPD_1}] [get_bd_nets {clk_100MHz ARESETN_1 clk_150MHz_1 proc_sys_reset_0_peripheral_aresetn axi_intc_0_irq xlconstant_1_dout clk_200MHz_1 clk_250MHz_1}]] 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// Tcl Message: current_bd_design rm_design 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// bz (cr):  Paste : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: copy_bd_objs -from_design design_1 / $tmpCopyObjs 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_COPY_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Slave segment '/custom_logic/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/M_AXI_HPM0_FPD' at <0xA000_0000 [ 64K ]>. Slave segment '/custom_logic/axi_intc_0/S_AXI/Reg' is being assigned into address space '/M_AXI_HPM0_FPD' at <0xA001_0000 [ 64K ]>. Slave segment '/S_AXI_HP0_FPD/Reg' is being assigned into address space '/custom_logic/axi_dma_0/Data_MM2S' at <0x7000_0000 [ 256M ]>. Slave segment '/S_AXI_HP0_FPD/Reg' is being assigned into address space '/custom_logic/axi_dma_0/Data_S2MM' at <0x7000_0000 [ 256M ]>. 
+// Tcl Message: copy_bd_objs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 9260.766 ; gain = 0.000 ; free physical = 253 ; free virtual = 30850 
+// Elapsed time: 14 seconds
+dismissDialog("Paste"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 2,119 MB. GUI used memory: 100 MB. Current time: 6/28/21, 5:39:58 PM IRDT
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("rm_wrapper.v", 86, 217); // bP
+selectCodeEditor("rm_wrapper.v", 86, 217, false, false, false, false, true); // bP - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design (rm_design.bd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design (rm_design.bd)]", 2, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ak
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a (cr): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Create HDL Wrapper"); // a
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// bz (cr):  Create HDL Wrapper : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: make_wrapper -files [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd] -top 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value. INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>  Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/ui/bd_7add9ae2.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 2,220 MB (+23108kb) [00:01:42]
+// Tcl Message: VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/synth/rm_design.v 
+// Tcl Message: VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/sim/rm_design.v VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/hdl/rm_design_wrapper.v 
+// Tcl Message: make_wrapper: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 9260.766 ; gain = 0.000 ; free physical = 402 ; free virtual = 30595 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/hdl/rm_design_wrapper.v 
+dismissDialog("Create HDL Wrapper"); // bz
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design (rm_design.bd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design (rm_design.bd)]", 2, false, false, false, false, false, true); // D - Double Click
+// bz (cr):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,245 MB. GUI used memory: 103 MB. Current time: 6/28/21, 5:40:23 PM IRDT
+// Tcl Message: open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd} 
+dismissDialog("Open Block Design"); // bz
+// [Engine Memory]: 2,350 MB (+19401kb) [00:01:44]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design_wrapper (rm_design_wrapper.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design_wrapper (rm_design_wrapper.v)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// [GUI Memory]: 163 MB (+2679kb) [00:01:56]
+selectCodeEditor("rm_wrapper.v", 65, 328); // bP
+selectCodeEditor("rm_wrapper.v", 65, 328, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,299 MB. GUI used memory: 103 MB. Current time: 6/28/21, 5:41:03 PM IRDT
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, rm_design]", 5); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, rm_design]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ak
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // g: TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// aE (cr): Remove Sources: addNotify
+// bz (aE):  Remove Sources : addNotify
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// Tcl Message: remove_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/design_1/design_1.bd 
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: file delete -force /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/design_1 file delete -force /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/design_1 
+dismissDialog("Remove Sources"); // bz
+// TclEventType: FILE_SET_CHANGE
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+// HMemoryUtils.trashcanNow. Engine heap size: 2,363 MB. GUI used memory: 98 MB. Current time: 6/28/21, 5:41:18 PM IRDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 3, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ak
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v 
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Block Designs, rm_design]", 6); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Block Designs, rm_design]", 6); // D
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v), rm_design_inst : rm_design_wrapper (rm_design_wrapper.v)]", 2); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v), rm_design_inst : rm_design_wrapper (rm_design_wrapper.v)]", 2); // D
+// Elapsed time: 68 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v), rm_design_inst : rm_design_wrapper (rm_design_wrapper.v)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v), rm_design_inst : rm_design_wrapper (rm_design_wrapper.v), rm_design_i : rm_design (rm_design.bd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v), rm_design_inst : rm_design_wrapper (rm_design_wrapper.v), rm_design_i : rm_design (rm_design.bd)]", 3, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE, "Generate Output Products..."); // ak
+// Run Command: PAResourceCommand.PACommandNames_GENERATE_COMPOSITE_FILE
+// aI (cr): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// bz (cr):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd] 
+// Tcl Message: Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>  Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/ui/bd_7add9ae2.ui>  
+// Tcl Message: VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/synth/rm_design.v 
+// Tcl Message: VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/sim/rm_design.v VHDL Output written to : /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/hdl/rm_design_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/xbar . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/s00_couplers/auto_ds . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_0/s00_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_dma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/floating_point_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/xbar . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/s00_couplers/auto_us . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/s01_couplers/auto_us . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_interconnect_1/m00_couplers/auto_cc . INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/axi_intc_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/xlconcat_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/proc_sys_reset_0_240MHz . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Exporting to file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/ip/rm_design_system_ila_0_0/bd_0/hw_handoff/rm_design_system_ila_0_0.hwh Generated Block Design Tcl file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/ip/rm_design_system_ila_0_0/bd_0/hw_handoff/rm_design_system_ila_0_0_bd.tcl Generated Hardware Definition File /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/ip/rm_design_system_ila_0_0/bd_0/synth/rm_design_system_ila_0_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block custom_logic/system_ila_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block dfx_axi_shutdown_man_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block dfx_axi_shutdown_man_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 . 
+// Tcl Message: Exporting to file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/hw_handoff/rm_design.hwh Generated Block Design Tcl file /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/hw_handoff/rm_design_bd.tcl Generated Hardware Definition File /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/synth/rm_design.hwdef 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_xbar_0] } 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_xbar_0, cache-ID = 1510b23865492c5f; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_auto_ds_0] } 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_auto_ds_0, cache-ID = 437859158ef62afb; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_auto_pc_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_auto_pc_0, cache-ID = 3c04191bedeec1a1; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_axi_dma_0_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_axi_dma_0_0, cache-ID = 183499826fbd6426; cache size = 70.700 MB. 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_floating_point_0_0] } 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_floating_point_0_0, cache-ID = e38d26efe218e10b; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_xbar_1] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_xbar_1, cache-ID = e224e1358bfbcdf5; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_auto_us_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_auto_us_0, cache-ID = 71340ddbc11e95e1; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_auto_us_1] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_auto_us_1, cache-ID = d1746b8a8b7bbbdd; cache size = 70.700 MB. 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_auto_cc_0] } 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_auto_cc_0, cache-ID = 9e1ce18e19717a4a; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_axi_intc_0_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_axi_intc_0_0, cache-ID = f20b491b1b03d344; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_proc_sys_reset_0_240MHz_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_proc_sys_reset_0_240MHz_0, cache-ID = b88a2e7abd2dec5d; cache size = 70.700 MB. 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_system_ila_0_0] } 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_dfx_axi_shutdown_man_0_0] } 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_dfx_axi_shutdown_man_0_0, cache-ID = e9d750e30023b211; cache size = 70.700 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: catch { config_ip_cache -export [get_ips -all rm_design_dfx_axi_shutdown_man_1_0] } 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP rm_design_dfx_axi_shutdown_man_1_0, cache-ID = fdc4fe5eef61bd49; cache size = 70.700 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs rm_design_system_ila_0_0_synth_1 -jobs 4 
+// Tcl Message: [Mon Jun 28 17:43:04 2021] Launched rm_design_system_ila_0_0_synth_1... Run output will be captured here: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.runs/rm_design_system_ila_0_0_synth_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,435 MB. GUI used memory: 100 MB. Current time: 6/28/21, 5:43:08 PM IRDT
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// 'br' command handler elapsed time: 27 seconds
+// Elapsed time: 26 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Command: 'rdi::info_commands {s*}'
+// Tcl Command: 'rdi::info_commands {sourc*}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {t}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./} {tc}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./tcl_files/} {}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./tcl_files/} {}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {source} {./tcl_files/} {ge}'
+// Elapsed time: 501 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source ./tcl_files/generate_dcp_from_design.tcl", true); // l
+// Tcl Command: 'source ./tcl_files/generate_dcp_from_design.tcl'
+// Tcl Command: 'source ./tcl_files/generate_dcp_from_design.tcl'
+// bz (cr):  Tcl Command Line : addNotify
+// Tcl Message: source ./tcl_files/generate_dcp_from_design.tcl 
+dismissDialog("Tcl Command Line"); // bz
+// Tcl Command: 'rdi::info_commands {ds*}'
+// Tcl Command: 'rdi::info_commands {dcp*}'
+// Tcl Command: 'rdi::info_commands {dcp*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "dcp_gen {}", true); // l
+// Tcl Command: 'dcp_gen {}'
+// Tcl Command: 'dcp_gen {}'
+// Tcl Message: dcp_gen {} 
+// Tcl Message: Command: synth_design -mode out_of_context -top rm_wrapper Starting synth_design Using part: xczu7ev-ffvc1156-2-e Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev' 
+// bz (cr):  Tcl Command Line : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,574 MB. GUI used memory: 111 MB. Current time: 6/28/21, 5:51:48 PM IRDT
+// TclEventType: ELABORATE_START
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 10408.723 ; gain = 53.016 ; free physical = 1519 ; free virtual = 29554 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Loading Part and Timing Information --------------------------------------------------------------------------------- Loading part: xczu7ev-ffvc1156-2-e 
+// Tcl Message: INFO: [Synth 8-6742] Reading net delay rules and data 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 10408.723 ; gain = 53.016 ; free physical = 1519 ; free virtual = 29554 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Applying 'set_property' XDC Constraints --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 10408.723 ; gain = 53.016 ; free physical = 1519 ; free virtual = 29554 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 10408.723 ; gain = 53.016 ; free physical = 1510 ; free virtual = 29545 
+// Tcl Message: --------------------------------------------------------------------------------- Start Cross Boundary and Area Optimization --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 10408.723 ; gain = 53.016 ; free physical = 1500 ; free virtual = 29543 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// [Engine Memory]: 3,470 MB (+1051687kb) [00:13:32]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,574 MB. GUI used memory: 111 MB. Current time: 6/28/21, 5:52:13 PM IRDT
+// Tcl Message: --------------------------------------------------------------------------------- Start Applying XDC Timing Constraints --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 10801.805 ; gain = 446.098 ; free physical = 926 ; free virtual = 28967 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Timing Optimization --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 10801.805 ; gain = 446.098 ; free physical = 925 ; free virtual = 28966 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Technology Mapping --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 10821.844 ; gain = 466.137 ; free physical = 923 ; free virtual = 28964 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 10827.781 ; gain = 472.074 ; free physical = 919 ; free virtual = 28964 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Renaming Generated Instances --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 10827.781 ; gain = 472.074 ; free physical = 919 ; free virtual = 28964 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Rebuilding User Hierarchy --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 10827.781 ; gain = 472.074 ; free physical = 919 ; free virtual = 28964 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Renaming Generated Ports --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 10827.781 ; gain = 472.074 ; free physical = 919 ; free virtual = 28964 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 10827.781 ; gain = 472.074 ; free physical = 919 ; free virtual = 28964 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Renaming Generated Nets --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 10827.781 ; gain = 472.074 ; free physical = 919 ; free virtual = 28964 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 10827.781 ; gain = 472.074 ; free physical = 919 ; free virtual = 28964 
+// Tcl Message: --------------------------------------------------------------------------------- Synthesis finished with 0 errors, 0 critical warnings and 0 warnings. Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 10827.781 ; gain = 419.059 ; free physical = 958 ; free virtual = 29004 Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 10827.789 ; gain = 472.074 ; free physical = 958 ; free virtual = 29004 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,867 MB. GUI used memory: 111 MB. Current time: 6/28/21, 5:52:28 PM IRDT
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: TIMING_RESULTS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 4,306 MB. GUI used memory: 110 MB. Current time: 6/28/21, 5:52:39 PM IRDT
+// [Engine Memory]: 4,306 MB (+694377kb) [00:14:00]
+// [GUI Memory]: 193 MB (+22699kb) [00:14:01]
+// TclEventType: DESIGN_NEW
+// [GUI Memory]: 218 MB (+16441kb) [00:14:02]
+// [GUI Memory]: 235 MB (+5965kb) [00:14:02]
+// [GUI Memory]: 252 MB (+6072kb) [00:14:02]
+// Xgd.load filename: /home/avanpc/tools/Xilinx/Vivado/2020.2/data/parts/xilinx/zynquplus/devint/zynquplus/xczu7ev/xczu7ev.xgd; ZipEntry: xczu7ev_detail.xgd elapsed time: 2s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 2.3s
+// [Engine Memory]: 4,540 MB (+20026kb) [00:14:03]
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1843 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.27 . Memory (MB): peak = 10909.895 ; gain = 0.000 ; free physical = 982 ; free virtual = 29024 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 485 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/ip/rm_design_axi_dma_0_0/rm_design_axi_dma_0_0.xdc] for cell 'rm_design_inst/rm_design_i/custom_logic/axi_dma_0/U0' 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.gen/sources_1/bd/rm_design/ip/rm_design_auto_cc_0/rm_design_auto_cc_0_clocks.xdc:16] 
+// Tcl Message: INFO: [Project 1-1715] 4 XPM XDC files have been applied to the design. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11291.168 ; gain = 0.000 ; free physical = 800 ; free virtual = 28848 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 360 instances were transformed.   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 168 instances   DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance    DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 7 instances   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 184 instances  
+// Tcl Message: INFO: [Common 17-83] Releasing license: Synthesis 
+// Tcl Message: 92 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:00:58 . Memory (MB): peak = 11528.945 ; gain = 1912.684 ; free physical = 525 ; free virtual = 28574 
+// Tcl Message: | synth_design        | 00h:00m:58s   | 17:51:44 Mon Jun 28 2021  | rm_wrapper                                                                            | | ------------------- | ------------- | ------------------------- | ------------------------------------------------------------------------------------- | 
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.5s
+// [Engine Memory]: 4,802 MB (+36126kb) [00:14:04]
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-480] Writing timing data to binary archive. 
+// Tcl Message: INFO: [Common 17-1381] The checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/results/dcp_files/rm_wrapper_synth.dcp' has been generated. 
+// Tcl Message: | write_checkpiont    | 00h:00m:05s   | 17:52:42 Mon Jun 28 2021  | Write out synthesis DCP                                                               | | ------------------- | ------------- | ------------------------- | ------------------------------------------------------------------------------------- | 
+// Elapsed time: 63 seconds
+dismissDialog("Tcl Command Line"); // bz
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // l
+// [GUI Memory]: 268 MB (+3241kb) [00:22:09]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 202 MB. Current time: 6/28/21, 6:22:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 6:52:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 7:22:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 7:52:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 8:22:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 8:52:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 9:22:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 9:52:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 10:22:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 10:52:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 11:22:43 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/28/21, 11:52:44 PM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 12:22:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 12:52:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 1:22:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 1:52:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 2:22:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 2:52:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 3:22:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 3:52:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 4:22:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 4:52:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 5:22:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 5:52:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 6:22:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 6:52:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 7:22:44 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 7:52:45 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 8:22:45 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 8:52:45 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 9:22:45 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 9:52:45 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 10:22:45 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 10:52:45 AM IRDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,744 MB. GUI used memory: 189 MB. Current time: 6/29/21, 11:22:45 AM IRDT

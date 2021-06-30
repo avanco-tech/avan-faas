@@ -1,0 +1,21 @@
+verilog xil_defaultlib --include "../../../../rm_template.gen/sources_1/bd/rm_design/ipshared/ec67/hdl" --include "../../../../rm_template.gen/sources_1/bd/rm_design/ipshared/1b7e/hdl/verilog" --include "../../../../rm_template.gen/sources_1/bd/rm_design/ipshared/122e/hdl/verilog" --include "../../../../rm_template.gen/sources_1/bd/rm_design/ipshared/b205/hdl/verilog" --include "../../../../rm_template.gen/sources_1/bd/rm_design/ipshared/c968/hdl/verilog" \
+"../../../bd/rm_design/ip/rm_design_xbar_0/sim/rm_design_xbar_0.v" \
+"../../../bd/rm_design/ip/rm_design_floating_point_0_0/sim/rm_design_floating_point_0_0.v" \
+"../../../bd/rm_design/ip/rm_design_xbar_1/sim/rm_design_xbar_1.v" \
+"../../../bd/rm_design/ip/rm_design_xlconcat_0_0/sim/rm_design_xlconcat_0_0.v" \
+"../../../bd/rm_design/ip/rm_design_system_ila_0_0/bd_0/sim/bd_8f7a.v" \
+"../../../bd/rm_design/ip/rm_design_system_ila_0_0/bd_0/ip/ip_0/sim/bd_8f7a_ila_lib_0.v" \
+"../../../bd/rm_design/ip/rm_design_system_ila_0_0/bd_0/ip/ip_1/bd_8f7a_g_inst_0_gigantic_mux.v" \
+"../../../bd/rm_design/ip/rm_design_system_ila_0_0/bd_0/ip/ip_1/sim/bd_8f7a_g_inst_0.v" \
+"../../../bd/rm_design/ip/rm_design_system_ila_0_0/sim/rm_design_system_ila_0_0.v" \
+"../../../bd/rm_design/ip/rm_design_xlconstant_1_0/sim/rm_design_xlconstant_1_0.v" \
+"../../../bd/rm_design/sim/rm_design.v" \
+"../../../bd/rm_design/ip/rm_design_auto_ds_0/sim/rm_design_auto_ds_0.v" \
+"../../../bd/rm_design/ip/rm_design_auto_pc_0/sim/rm_design_auto_pc_0.v" \
+"../../../bd/rm_design/ip/rm_design_auto_us_0/sim/rm_design_auto_us_0.v" \
+"../../../bd/rm_design/ip/rm_design_auto_us_1/sim/rm_design_auto_us_1.v" \
+"../../../bd/rm_design/ip/rm_design_auto_cc_0/sim/rm_design_auto_cc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

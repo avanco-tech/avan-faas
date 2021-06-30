@@ -1,3 +1,4 @@
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
-INFO: [Common 17-1381] The checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/results/dcp_files/rm_wrapper_synth.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/results/dcp_files/rm_wrapper_synth.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 9476.281 ; gain = 0.000 ; free physical = 282 ; free virtual = 24681

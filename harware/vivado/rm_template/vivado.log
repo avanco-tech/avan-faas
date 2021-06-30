@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 30 22:04:15 2021
+# Process ID: 16833
+# Current directory: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template
+# Command line: vivado rm_template.xpr
+# Log file: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/vivado.log
+# Journal file: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project rm_template.xpr
+INFO: [Project 1-313] Project file moved from '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/avanpc/tools/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 7444.543 ; gain = 70.332 ; free physical = 10703 ; free virtual = 38718
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd}
+Reading block design file </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>...
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_1
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0_extra_2
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding component instance block -- xilinx.com:ip:dfx_axi_shutdown_manager:1.0 - dfx_axi_shutdown_man_0
+Adding component instance block -- xilinx.com:ip:dfx_axi_shutdown_manager:1.0 - dfx_axi_shutdown_man_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Successfully read diagram <rm_design> from block design file </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>
+write_bd_tcl -force /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/tcl_files/rm.tcl
+INFO: [BD 5-148] Tcl file written out </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/tcl_files/rm.tcl>.
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 30 22:05:43 2021...
