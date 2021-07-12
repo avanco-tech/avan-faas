@@ -1,5 +1,5 @@
 # Table of Contents
-1. [Overview of Avan FPGA-as-a-service Development Kit](#overview-of-avan-faas)
+1. [Overview of Avan FPGA-as-a-service Development Kit](#overview-of-avan-fpga-as-a-service-development-kit)
     - [Development Flow](#development-flow)
 2. [Getting Started](#getting-started)
 3. [Debugging](#debugging)
@@ -14,7 +14,8 @@ The flow to design and run your hardware on the avan fpga platform is described 
 In the hardware flow, first you create your FPGA design (also called Custom logic), and then you generate a design checkpoint from the design. After that a bitstream is generated for your design and is added to your bitstream repository, from where you can access it anytime. Finally you can load this bitstream in a FPGA instance.
 In the software flow, you first write a userspace program which will be running on a host CPU connected to the FPGA fabric. Then you attach to the linux OS running on this CPU and finally you run your code on the host cpu and access your dedicated memory or fpga logic from the proccessing system.
 
-![Alt text](design_flow.PNG)
+![Alt text](design_flow.jpg)
 
 
 # Getting Started
+
