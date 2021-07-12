@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Jun 30 22:04:15 2021
-# Process ID: 16833
+# Start of session at: Sun Jul 11 11:40:24 2021
+# Process ID: 11991
 # Current directory: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template
 # Command line: vivado rm_template.xpr
 # Log file: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/vivado.log
@@ -17,9 +17,23 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/avanpc/tools/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 7444.543 ; gain = 70.332 ; free physical = 10703 ; free virtual = 38718
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 7445.547 ; gain = 70.332 ; free physical = 27359 ; free virtual = 45514
 INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
 update_compile_order -fileset sources_1
+write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl}
+write_project_tcl: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 7681.660 ; gain = 0.000 ; free physical = 27300 ; free virtual = 45488
+export_ip_user_files -of_objects  [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/dfx_project/rtl/rm_wrapper.v] -no_script -reset -force -quiet
+remove_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/dfx_project/rtl/rm_wrapper.v
+import_files -norecurse /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/rtl_files/rm_wrapper.v] -no_script -reset -force -quiet
+remove_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/rtl_files/rm_wrapper.v
+file delete -force /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/rtl_files/rm_wrapper.v
+add_files -norecurse /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+write_project_tcl -all_properties -dump_project_info -quiet -verbose -force {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl}
 open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd}
 Reading block design file </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>...
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
@@ -41,8 +55,26 @@ Adding component instance block -- xilinx.com:ip:dfx_axi_shutdown_manager:1.0 - 
 Adding component instance block -- xilinx.com:ip:dfx_axi_shutdown_manager:1.0 - dfx_axi_shutdown_man_1
 Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
 Successfully read diagram <rm_design> from block design file </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>
-write_bd_tcl -force /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/tcl_files/rm.tcl
-INFO: [BD 5-148] Tcl file written out </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/tcl_files/rm.tcl>.
-
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 30 22:05:43 2021...
+move_bd_cells [get_bd_cells /] [get_bd_cells custom_logic/proc_sys_reset_0_extra_2]
+set_property name DDR_RESETN [get_bd_pins custom_logic/M00_ARESETN]
+save_bd_design
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_7add9ae2.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_6355def2.ui> 
+regenerate_bd_layout
+write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_template.tcl}
+validate_bd_design
+INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /custom_logic/axi_interconnect_0/s00_couplers/auto_ds/S_AXI(0) and /dfx_axi_shutdown_man_1/M_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /custom_logic/axi_interconnect_0/s00_couplers/auto_ds/S_AXI(0) and /dfx_axi_shutdown_man_1/M_AXI(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /dfx_axi_shutdown_man_0/S_AXI(1) and /custom_logic/axi_interconnect_1/m00_couplers/auto_cc/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /dfx_axi_shutdown_man_0/S_AXI(1) and /custom_logic/axi_interconnect_1/m00_couplers/auto_cc/M_AXI(0)
+validate_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 9494.695 ; gain = 0.000 ; free physical = 24945 ; free virtual = 44308
+save_bd_design
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_7add9ae2.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_6355def2.ui> 
+close_bd_design [get_bd_designs rm_design]
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_7add9ae2.ui> 
+Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_6355def2.ui> 
+write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl}

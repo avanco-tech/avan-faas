@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila/rm_template.xpr">
+<Project Version="7" Minor="54" Path="/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="6b133d148b12456cb05a9d89e8184dd0"/>
@@ -80,11 +80,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="rm_design.bd" FileRelPathName="ip/rm_design_proc_sys_reset_0_240MHz_0/rm_design_proc_sys_reset_0_240MHz_0.xci">
-          <Proxy FileSetName="rm_design_proc_sys_reset_0_240MHz_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="rm_design.bd" FileRelPathName="ip/rm_design_dfx_axi_shutdown_man_0_0/rm_design_dfx_axi_shutdown_man_0_0.xci">
           <Proxy FileSetName="rm_design_dfx_axi_shutdown_man_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="rm_design.bd" FileRelPathName="ip/rm_design_proc_sys_reset_0_240MHz_0/rm_design_proc_sys_reset_0_240MHz_0.xci">
+          <Proxy FileSetName="rm_design_proc_sys_reset_0_240MHz_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/rm_design/hdl/rm_design_wrapper.v">
@@ -94,10 +94,8 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/dfx_project/rtl/rm_wrapper.v">
+      <File Path="$PPRDIR/rtl_files/rm_wrapper.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../rtl/rm_wrapper.v"/>
-          <Attr Name="ImportTime" Val="1623244970"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -176,7 +174,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../rm_template/rm_template.srcs/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -185,17 +183,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="rm_design_proc_sys_reset_0_240MHz_0_synth_1" Type="Ft3:Synth" SrcSet="rm_design_proc_sys_reset_0_240MHz_0" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="rm_design_proc_sys_reset_0_240MHz_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/rm_design_proc_sys_reset_0_240MHz_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rm_design_proc_sys_reset_0_240MHz_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="rm_design_dfx_axi_shutdown_man_0_0_synth_1" Type="Ft3:Synth" SrcSet="rm_design_dfx_axi_shutdown_man_0_0" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="rm_design_dfx_axi_shutdown_man_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/rm_design_dfx_axi_shutdown_man_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rm_design_dfx_axi_shutdown_man_0_0_synth_1">
+    <Run Id="rm_design_proc_sys_reset_0_240MHz_0_synth_1" Type="Ft3:Synth" SrcSet="rm_design_proc_sys_reset_0_240MHz_0" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="rm_design_proc_sys_reset_0_240MHz_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/rm_design_proc_sys_reset_0_240MHz_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../rm_template_ila/rm_template.srcs/utils_1/imports/rm_design_proc_sys_reset_0_240MHz_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -205,7 +193,17 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../rm_template/rm_template.srcs/utils_1/imports/impl_1">
+    <Run Id="rm_design_dfx_axi_shutdown_man_0_0_synth_1" Type="Ft3:Synth" SrcSet="rm_design_dfx_axi_shutdown_man_0_0" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="rm_design_dfx_axi_shutdown_man_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/rm_design_dfx_axi_shutdown_man_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../rm_template_ila/rm_template.srcs/utils_1/imports/rm_design_dfx_axi_shutdown_man_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -222,7 +220,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="rm_design_proc_sys_reset_0_240MHz_0_impl_1" Type="Ft2:EntireDesign" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="rm_design_proc_sys_reset_0_240MHz_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="rm_design_proc_sys_reset_0_240MHz_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rm_design_proc_sys_reset_0_240MHz_0_impl_1">
+    <Run Id="rm_design_proc_sys_reset_0_240MHz_0_impl_1" Type="Ft2:EntireDesign" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="rm_design_proc_sys_reset_0_240MHz_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="rm_design_proc_sys_reset_0_240MHz_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../rm_template_ila/rm_template.srcs/utils_1/imports/rm_design_proc_sys_reset_0_240MHz_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -239,7 +237,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="rm_design_dfx_axi_shutdown_man_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="rm_design_dfx_axi_shutdown_man_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="rm_design_dfx_axi_shutdown_man_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rm_design_dfx_axi_shutdown_man_0_0_impl_1">
+    <Run Id="rm_design_dfx_axi_shutdown_man_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu7ev-ffvc1156-2-e" ConstrsSet="rm_design_dfx_axi_shutdown_man_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="rm_design_dfx_axi_shutdown_man_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../rm_template_ila/rm_template.srcs/utils_1/imports/rm_design_dfx_axi_shutdown_man_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
