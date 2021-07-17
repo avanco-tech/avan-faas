@@ -28,7 +28,7 @@ In order to start using the development kit, you first need to connect to a linu
 
 2. Open the copied VIVADO project and create your own design. To do this go to the directory where you copied the vivado project using 'cd <path to project>/rm_template" command in the shell, and 'vivado rm_template.xpr' command. The template block design is shown below.
 
-[Alt text](readme/block_design.jpg)
+![Alt text](readme/block_design.jpg)
 
 It is highly recommended to put your whole design inside the 'custom_logic' block and keep the rest unchanged. But if you don't want to use VIVADO IPI flow, you can add your HDL/... sources to the design.
  The following rules must be taken into consideration:
