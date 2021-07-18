@@ -1,8 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../bd/rm_design/ip/rm_design_axi_dma_0_0/sim/rm_design_axi_dma_0_0.vhd" \
-"../../../bd/rm_design/ip/rm_design_axi_intc_0_0/sim/rm_design_axi_intc_0_0.vhd" \
-"../../../bd/rm_design/ip/rm_design_proc_sys_reset_0_240MHz_0/sim/rm_design_proc_sys_reset_0_240MHz_0.vhd" \
-"../../../bd/rm_design/ip/rm_design_dfx_axi_shutdown_man_0_0/sim/rm_design_dfx_axi_shutdown_man_0_0.vhd" \
-"../../../bd/rm_design/ip/rm_design_dfx_axi_shutdown_man_1_0/sim/rm_design_dfx_axi_shutdown_man_1_0.vhd" \
-
-nosort
