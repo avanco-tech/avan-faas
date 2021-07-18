@@ -1,0 +1,700 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:47 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 11991
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sun Jul 11 11:40:38 IRDT 2021
+Time zone: 	Iran Standard Time (Asia/Tehran)
+
+OS: Ubuntu
+OS Version: 5.4.0-73-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 0.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/home/avanpc/tools/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2
+Java executable location: 	/home/avanpc/tools/Xilinx/Vivado/2020.2/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	avanpc
+User home directory: /home/avanpc
+User working directory: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/avanpc/tools/Xilinx/Vivado
+HDI_APPROOT: /home/avanpc/tools/Xilinx/Vivado/2020.2
+RDI_DATADIR: /home/avanpc/tools/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: /home/avanpc/tools/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: /home/avanpc/.Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: /home/avanpc/.Xilinx/Vivado/2020.2/
+Vivado layouts directory: /home/avanpc/.Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	/home/avanpc/tools/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/vivado.log
+Vivado journal file location: 	/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-11991-avanpc
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/avanpc/tools/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: /home/avanpc/tools/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: /home/avanpc/tools/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: /home/avanpc/tools/Xilinx/Vivado/2020.2
+XILINX_SDK: /home/avanpc/tools/Xilinx/Vitis/2020.2
+XILINX_VITIS: /home/avanpc/tools/Xilinx/Vitis/2020.2
+XILINX_VIVADO: /home/avanpc/tools/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: /home/avanpc/tools/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,554 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 83 MB (+84078kb) [00:00:04]
+// [Engine Memory]: 1,540 MB (+1463384kb) [00:00:04]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: rm_template.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project rm_template.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,564 MB. GUI used memory: 55 MB. Current time: 7/11/21, 11:40:39 AM IRDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 107 MB (+20783kb) [00:00:12]
+// [Engine Memory]: 1,637 MB (+21098kb) [00:00:12]
+// [GUI Memory]: 112 MB (+176kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  2065 ms.
+// Tcl Message: open_project rm_template.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template_ila' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/avanpc/tools/Xilinx/Vivado/2020.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 7445.547 ; gain = 70.332 ; free physical = 27359 ; free virtual = 45514 
+// Project name: rm_template; location: /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template; part: xczu7ev-ffvc1156-2-e
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 120 MB (+2471kb) [00:00:17]
+// [GUI Memory]: 132 MB (+6229kb) [00:00:19]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL, "Write Tcl..."); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+// Run Command: PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL
+// aL (cr): Write Project to Tcl: addNotify
+// [GUI Memory]: 145 MB (+6256kb) [00:00:26]
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_WRITE_ALL_PROPERTIES, "Write all properties", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_RECREATE_BLOCK_DESIGNS_USING_TCL, "Recreate Block Designs using Tcl", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_WRITE_OBJECT_VALUES, "Write object values", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_IGNORE_COMMAND_ERRORS, "Ignore command errors", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_SUSPEND_MESSAGE_LIMITS_DURING_COMMAND, "Suspend message limits during command execution", true); // g: TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Tcl Command: 'write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl}'
+// 'q' command handler elapsed time: 9 seconds
+dismissDialog("Write Project to Tcl"); // aL
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: FILE_SET_CHANGE
+// bz (cr):  Write Project to Tcl : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl} 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// Tcl Message: INFO: [BD 5-453] Writing out BD creation steps for rm_design as a TCL proc 
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: write_project_tcl: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 7681.660 ; gain = 0.000 ; free physical = 27300 ; free virtual = 45488 
+dismissDialog("Write Project to Tcl"); // bz
+selectButton("OptionPane.button", "Yes"); // JButton
+// [Engine Memory]: 1,737 MB (+18356kb) [00:00:47]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,738 MB. GUI used memory: 80 MB. Current time: 7/11/21, 11:41:19 AM IRDT
+// Elapsed time: 166 seconds
+selectCodeEditor("rm_template.tcl", 481, 182); // bP
+// Elapsed time: 259 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 50 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+// Elapsed time: 30 seconds
+selectCodeEditor("rm_wrapper.v", 158, 136); // bP
+typeControlKey((HResource) null, "rm_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "rm_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "rm_wrapper.v", 'c'); // bP
+typeControlKey((HResource) null, "rm_wrapper.v", 'c'); // bP
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 96 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // E
+// Elapsed time: 11 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 3); // i
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i
+selectButton(PAResourceEtoH.FileSetView_EXPAND_ALL, "Sources_expand_all"); // E
+selectButton(PAResourceEtoH.FileSetView_COLLAPSE_ALL, "Sources_collapse_all"); // E
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ak
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/dfx_project/rtl/rm_wrapper.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/dfx_project/rtl/rm_wrapper.v 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 82 MB. Current time: 7/11/21, 11:52:09 AM IRDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ak
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_wrapper.v");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 15 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -norecurse /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// [Engine Memory]: 1,830 MB (+7324kb) [00:12:13]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,831 MB. GUI used memory: 84 MB. Current time: 7/11/21, 11:52:44 AM IRDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ak
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // g: TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/rtl_files/rm_wrapper.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/rtl_files/rm_wrapper.v 
+// Tcl Message: file delete -force /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/imports/rtl_files/rm_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 1,929 MB (+7057kb) [00:12:37]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design_wrapper (rm_design_wrapper.v)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,896 MB. GUI used memory: 84 MB. Current time: 7/11/21, 11:53:09 AM IRDT
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+setFileChooser("/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_wrapper.v");
+selectCheckBox(PAResourceQtoS.SrcChooserPanel_ADD_SOURCES_FROM_SUBDIRECTORIES, "Add sources from subdirectories", false); // g: FALSE
+selectCheckBox(PAResourceQtoS.SrcChooserPanel_MAKE_LOCAL_COPY_OF_THESE_FILES_INTO, "Copy sources into project", false); // g: FALSE
+selectCheckBox(PAResourceQtoS.SrcChooserPanel_MAKE_LOCAL_COPY_OF_THESE_FILES_INTO, "Copy sources into project", true); // g: TRUE
+// Elapsed time: 38 seconds
+selectCheckBox(PAResourceQtoS.SrcChooserPanel_MAKE_LOCAL_COPY_OF_THESE_FILES_INTO, "Copy sources into project", false); // g: FALSE
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 51 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_wrapper.v 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design_wrapper (rm_design_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_design_wrapper (rm_design_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,924 MB. GUI used memory: 110 MB. Current time: 7/11/21, 11:54:09 AM IRDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL, "Write Tcl..."); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+// Run Command: PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL
+// aL (cr): Write Project to Tcl: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// c (cr): Add Sources: addNotify
+selectButton("OptionPane.button", "OK"); // JButton
+// Tcl Command: 'write_project_tcl -all_properties -dump_project_info -quiet -verbose -force {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl}'
+// 'q' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: MSGMGR_REFRESH_MSG
+dismissDialog("Write Project to Tcl"); // aL
+// TclEventType: FILE_SET_CHANGE
+// bz (cr):  Write Project to Tcl : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: write_project_tcl -all_properties -dump_project_info -quiet -verbose -force {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: INFO: [BD 5-453] Writing out BD creation steps for rm_design as a TCL proc 
+dismissDialog("Write Project to Tcl"); // bz
+selectButton("OptionPane.button", "Yes"); // JButton
+// Elapsed time: 1071 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cr):  Open Block Design : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd} 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 2,078 MB (+55255kb) [00:32:18]
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// 'bF' command handler elapsed time: 4 seconds
+dismissDialog("Open Block Design"); // bz
+// [Engine Memory]: 2,182 MB (+716kb) [00:32:19]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,209 MB. GUI used memory: 97 MB. Current time: 7/11/21, 12:12:50 PM IRDT
+// [GUI Memory]: 159 MB (+7023kb) [00:32:26]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: move_bd_cells [get_bd_cells /] [get_bd_cells custom_logic/proc_sys_reset_0_extra_2] 
+// Elapsed time: 35 seconds
+setText(PAResourceQtoS.RSBBlockPortPropPanels_NAME, "DDR_RESETN"); // aa
+// Tcl Command: 'set_property name DDR_RESETN [get_bd_pins custom_logic/M00_ARESETN]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name DDR_RESETN [get_bd_pins custom_logic/M00_ARESETN] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>  Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_7add9ae2.ui>  Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_6355def2.ui>  
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 25 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL, "Write Tcl..."); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+// Run Command: PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL
+// aL (cr): Write Project to Tcl: addNotify
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_WRITE_ALL_PROPERTIES, "Write all properties", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_RECREATE_BLOCK_DESIGNS_USING_TCL, "Recreate Block Designs using Tcl", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_WRITE_OBJECT_VALUES, "Write object values", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_IGNORE_COMMAND_ERRORS, "Ignore command errors", true); // g: TRUE
+selectCheckBox(PAResourceTtoZ.WriteProjectTclDialog_SUSPEND_MESSAGE_LIMITS_DURING_COMMAND, "Suspend message limits during command execution", true); // g: TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Tcl Command: 'write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_template.tcl}'
+// 'q' command handler elapsed time: 9 seconds
+// TclEventType: MSGMGR_REFRESH_MSG
+dismissDialog("Write Project to Tcl"); // aL
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rtl_files/rm_template.tcl} 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bz (cr):  Write Project to Tcl : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: INFO: [BD 5-453] Writing out BD creation steps for rm_design as a TCL proc 
+dismissDialog("Write Project to Tcl"); // bz
+selectButton("OptionPane.button", "Yes"); // JButton
+// HMemoryUtils.trashcanNow. Engine heap size: 2,265 MB. GUI used memory: 105 MB. Current time: 7/11/21, 12:14:39 PM IRDT
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView(PAResourceOtoP.PAViews_SYSTEM, "System"); // hv
+// Elapsed time: 146 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, rm_wrapper (rm_wrapper.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rm_wrapper.v", 3); // m
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+closeView((HResource) null, "Address Map"); // AddressMapHtml
+closeView(PAResourceOtoP.PAViews_ADDRESS_EDITOR, "Address Editor"); // c
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+closeTask("IP Integrator", "Block Design", "DesignTask.IP_INTEGRATOR");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Confirm Close"); // A
+selectButton(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "System_validate_bd_design_rsb"); // E
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// Tcl Command: 'validate_bd_design'
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: validate_bd_design 
+// TclEventType: FILE_SET_CHANGE
+// bz (cr):  Validate Design : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+// Tcl Message: INFO: [xilinx.com:ip:floating_point:7.1-913] /custom_logic/floating_point_0 A_Precision_Type has been set to manual on the GUI. It will not be updated during validation with a propagated value. 
+// Tcl Message: validate_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 9494.695 ; gain = 0.000 ; free physical = 24945 ; free virtual = 44308 
+// Elapsed time: 11 seconds
+dismissDialog("Validate Design"); // bz
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+closeTask("IP Integrator", "Block Design", "DesignTask.IP_INTEGRATOR");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// HOptionPane Warning: 'Would you like to save 'Block Design - rm_design' before closing? (Unsaved Changes)'
+dismissDialog("Confirm Close"); // A
+// bz (cr):  Save Constraints : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: save_bd_design 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/rm_design.bd>  Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_7add9ae2.ui>  Wrote  : </home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.srcs/sources_1/bd/rm_design/ui/bd_6355def2.ui>  
+// bz (cr):  Close Block Designs : addNotify
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: close_bd_design [get_bd_designs rm_design] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Close Block Designs"); // bz
+// [Engine Memory]: 2,308 MB (+17367kb) [00:37:35]
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+// HMemoryUtils.trashcanNow. Engine heap size: 2,294 MB. GUI used memory: 100 MB. Current time: 7/11/21, 12:18:09 PM IRDT
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL, "Write Tcl..."); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+// Run Command: PAResourceCommand.PACommandNames_WRITE_PROJECT_TCL
+// aL (cr): Write Project to Tcl: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Tcl Command: 'write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl}'
+// 'q' command handler elapsed time: 4 seconds
+// TclEventType: MSGMGR_REFRESH_MSG
+dismissDialog("Write Project to Tcl"); // aL
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: write_project_tcl -all_properties -dump_project_info -quiet -verbose {/home/avanpc/avanco/vivado_projects/dynamic_function_exchange/dfx_project/rm_template/rm_template.tcl} 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bz (cr):  Write Project to Tcl : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: INFO: [BD 5-453] Writing out BD creation steps for rm_design as a TCL proc 
+dismissDialog("Write Project to Tcl"); // bz
+selectButton("OptionPane.button", "Yes"); // JButton
