@@ -36,6 +36,7 @@ It is highly recommended to put your whole design inside the `custom_logic` bloc
 * AXI Master and Slave Address maps must stay in the range given by the block design. Currently the PL Slave interface (From PS to PL) can map `0xA0000000 - 0xAFFFFFFF` (256MB) of PL register Addresses and the PL Master interface (From PL to PS) can map `0x70000000 - 0x7FFFFFFF` (256MB) of DRAM memory.
 * As seen in the template block design, the reference clock of the PL Slave interface (M_AXI_HPM0_FPD) is clk_main and the reference clock of the PL Master interface (S_AXI_HP0_FPD) is clock_extra_2. Use the interfaces with their own clock otherwise your design will fail to work properly.
 * Currently only one PL-PS interrupt pin is provided, so you need to use [AXI Interrupt controller](https://www.xilinx.com/support/documentation/ip_documentation/axi_intc/v4_1/pg099-axi-intc.pdf) IP core to handle more than one interrupt pins.
+* Your design resources must be less than the resources provided to you. You can find the resource limitation in the [resource table](readme/Resource_table.csv).
 
 The provided input clock frequencies are provided in the [clock table](readme/clock_recipes.csv).
 
